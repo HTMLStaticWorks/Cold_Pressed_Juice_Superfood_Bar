@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verde & Vita - Organic cold-pressed juice menu. Detox, Energy, Immunity, Protein, and Superfood bowls.">
+  <meta name="keywords" content="juice menu, acai bowls, cold-pressed, smoothies, organic nutrition">
+  <title>Verde & Vita | Live Juice Menu</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="custom-cursor"></div>
+  <div class="offcanvas-backdrop-custom"></div>
+
+  <!-- Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="index.html">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+          </svg>
+          <span>Verde & Vita</span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+                <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1: Parallax Split</a></li>
+                <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2: Product Story</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom active" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+          <button class="btn btn-sm btn-brand-outline py-1 px-3 d-none d-sm-inline-block rtl-toggle-btn">RTL</button>
+          <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+            <i class="bi bi-bag"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+          </button>
+          <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login"><i class="bi bi-person"></i></a>
+          <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
+    <div class="d-flex flex-column h-100 justify-content-between">
+      <ul class="navbar-nav gap-3 fs-3">
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home 2</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom active" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Cleanse Programs</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Brand</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="border-top pt-4">
+        <button class="toggle-icon-btn theme-toggle-btn mb-3"><i class="bi bi-moon-stars"></i></button>
+        <button class="btn btn-sm btn-brand-outline rtl-toggle-btn px-4 w-100 mb-3">RTL</button>
+        <a href="login.html" class="btn btn-brand w-100 py-3"><i class="bi bi-person me-2"></i>Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-custom" id="cart-drawer">
+    <div>
+      <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
+        <h4 class="mb-0 text-brand-primary font-weight-600">Your Order</h4>
+        <button class="btn-close" id="cart-close-btn" aria-label="Close Cart"></button>
+      </div>
+      <div id="cart-items-container" class="overflow-y-auto" style="max-height: 55vh;"></div>
+    </div>
+    <div class="border-top pt-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Subtotal</span>
+        <h4 class="mb-0 text-brand-primary font-weight-600" id="cart-subtotal">$0.00</h4>
+      </div>
+      <a href="menu.html" class="btn btn-brand w-100 py-3 mb-2">Proceed to Checkout</a>
+      <button class="btn btn-brand-outline w-100 py-3" onclick="document.getElementById('cart-close-btn').click();">Continue Shopping</button>
+    </div>
+  </div>
+
+  <main style="padding-top: 100px;">
+    <!-- Menu Title -->
+    <section class="section-padding text-center" style="background-color: var(--bg-soft);">
+      <div class="container">
+        <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Daily Pressed</span>
+        <h1 class="font-display-large text-brand-primary mb-3">The Juice & Bowl Menu</h1>
+        <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
+          Choose your liquid medicine. Organic veggies, fresh seeds, roots, and pure unheated nutrients.
+        </p>
+
+        <!-- Search Bar -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-6 col-lg-5">
+            <div class="input-group glass-card p-1 rounded-pill" style="border-radius: 50px;">
+              <span class="input-group-text border-0 bg-transparent ps-3"><i class="bi bi-search text-muted"></i></span>
+              <input type="text" class="form-control border-0 bg-transparent" id="menu-search-input" placeholder="Search juices or ingredients..." aria-label="Search items">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters and Menu Grid -->
+    <section class="section-padding">
+      <div class="container">
+        <!-- Category Navigation Pills -->
+        <div class="d-flex justify-content-center flex-wrap menu-nav-pills mb-5">
+          <button class="nav-link active" data-filter="all">All Items</button>
+          <button class="nav-link" data-filter="detox">Detox</button>
+          <button class="nav-link" data-filter="energy">Energy</button>
+          <button class="nav-link" data-filter="immunity">Immunity</button>
+          <button class="nav-link" data-filter="protein">Protein</button>
+          <button class="nav-link" data-filter="superfood">Superfood Bowls</button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="row g-4 justify-content-center" id="menu-items-grid">
+          
+          <!-- Item 1: Green Detox (Detox) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="detox">
+            <div class="glass-card text-start h-100" data-product-name="Green Detox" data-product-price="8.50" data-product-img="assets/images/green_detox.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge">Chlorophyll</span>
+                <img src="assets/images/green_detox.png" alt="Green Detox" class="juice-card-img">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Green Detox</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Spinach, Kale, Celery, Green Apple, Ginger, Lemon</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$8.50</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Green Detox', '$8.50', 'assets/images/green_detox.png', 'Spinach, Kale, Celery, Green Apple, Ginger, Lemon', 'Low fructose, high chlorophyll cellular alkalizer.', '120kcal', '2g', '24g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Tropical Energy (Energy) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="energy">
+            <div class="glass-card text-start h-100" data-product-name="Tropical Energy" data-product-price="8.50" data-product-img="assets/images/tropical_energy.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-warning text-dark">Vitamin C</span>
+                <img src="assets/images/tropical_energy.png" alt="Tropical Energy" class="juice-card-img">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Tropical Energy</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Mango, Pineapple, Orange, Passion Fruit, Turmeric</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$8.50</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Tropical Energy', '$8.50', 'assets/images/tropical_energy.png', 'Mango, Pineapple, Orange, Passion Fruit, Turmeric', 'Enzymatic bromelain blend to support digestive enzymes and speed recovery.', '160kcal', '1g', '34g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Berry Boost (Energy) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="energy">
+            <div class="glass-card text-start h-100" data-product-name="Berry Boost" data-product-price="9.00" data-product-img="assets/images/berry_boost.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-danger">Antioxidant</span>
+                <img src="assets/images/berry_boost.png" alt="Berry Boost" class="juice-card-img">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Berry Boost</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Berry Boost', '$9.00', 'assets/images/berry_boost.png', 'Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple', 'Poly-phenols and nitric oxides to restore blood flow dynamics.', '145kcal', '1.5g', '31g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Immunity Blend (Immunity) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="immunity">
+            <div class="glass-card text-start h-100" data-product-name="Immunity Blend" data-product-price="9.00" data-product-img="assets/images/immunity_blend.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-info text-dark">Alkaline</span>
+                <img src="assets/images/immunity_blend.png" alt="Immunity Blend" class="juice-card-img">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Immunity Blend</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Ginger, Turmeric, Carrot, Lemon, Black Pepper, Honey</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Immunity Blend', '$9.00', 'assets/images/immunity_blend.png', 'Ginger, Turmeric, Carrot, Lemon, Black Pepper, Honey', 'Active curcuminoids combined with piperine for cellular defense boosts.', '110kcal', '1g', '21g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: Almond Fuel (Protein) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="protein">
+            <div class="glass-card text-start h-100" data-product-name="Almond Fuel" data-product-price="9.50" data-product-img="assets/images/tropical_energy.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-success text-white">L-Arginine</span>
+                <img src="assets/images/tropical_energy.png" alt="Almond Fuel" class="juice-card-img" style="filter: hue-rotate(90deg);">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Almond Fuel</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Activated Almond Milk, Raw Almond Butter, Dates, Vanilla Bean, Cinnamon</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$9.50</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Almond Fuel', '$9.50', 'assets/images/tropical_energy.png', 'Activated Almond Milk, Raw Almond Butter, Dates, Vanilla Bean, Cinnamon', 'Keto-friendly protein lipids to maintain biological full feeling and repair cells.', '290kcal', '10g', '18g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Acai Berry Bowl (Superfood) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="superfood">
+            <div class="glass-card text-start h-100" data-product-name="Acai Berry Bowl" data-product-price="12.00" data-product-img="assets/images/berry_boost.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-dark">Fiber Focus</span>
+                <img src="assets/images/berry_boost.png" alt="Acai Bowl" class="juice-card-img" style="filter: grayscale(0.5) contrast(1.2);">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Acai Berry Bowl</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Pure Acai Blend, Organic Granola, Banana, Blueberries, Raw Coconut Shavings, Cacao Nibs</p>
+              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$12.00</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Acai Berry Bowl', '$12.00', 'assets/images/berry_boost.png', 'Pure Acai Blend, Organic Granola, Banana, Blueberries, Raw Coconut Shavings, Cacao Nibs', 'Superfood berry paste structured with raw fibers and activated seed crunch.', '380kcal', '6g', '48g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="modal fade" id="quickview-modal" tabindex="-1" aria-labelledby="quickviewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 glass-card p-4" style="background-color: var(--bg-card);">
+          <div class="modal-header border-0 pb-0">
+            <h4 class="modal-title text-brand-primary font-weight-600" id="quickviewModalLabel">Product Details</h4>
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body pt-3">
+            <div class="row align-items-center">
+              <div class="col-md-5 text-center mb-3 mb-md-0">
+                <img id="qv-img" src="assets/images/green_detox.png" style="max-height: 180px; width: auto;" alt="Juice Details">
+              </div>
+              <div class="col-md-7">
+                <h3 class="fs-3 text-brand-primary mb-1" id="qv-title">Green Detox</h3>
+                <span class="fs-5 text-brand-primary font-weight-600 d-block mb-3" id="qv-price">$8.50</span>
+                
+                <h5 class="fs-6 text-brand-primary mb-1">Active Ingredients</h5>
+                <p class="text-muted small mb-3" id="qv-ingredients">Spinach, Kale, Celery, Green Apple, Ginger, Lemon</p>
+                
+                <h5 class="fs-6 text-brand-primary mb-1">Health Benefit</h5>
+                <p class="text-muted small mb-4" id="qv-benefit">Low fructose cellular alkalizer.</p>
+                
+                <!-- Macro Stats -->
+                <div class="row g-2 text-center">
+                  <div class="col-4 border-end">
+                    <span class="d-block small text-muted">Calories</span>
+                    <strong class="text-brand-primary" id="qv-calories">120kcal</strong>
+                  </div>
+                  <div class="col-4 border-end">
+                    <span class="d-block small text-muted">Protein</span>
+                    <strong class="text-brand-primary" id="qv-protein">2g</strong>
+                  </div>
+                  <div class="col-4">
+                    <span class="d-block small text-muted">Carbs</span>
+                    <strong class="text-brand-primary" id="qv-carbs">24g</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2 mb-4" href="index.html">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+            </svg>
+            <span>Verde & Vita</span>
+          </a>
+          <p class="text-muted mb-4 fs-6" style="max-width: 320px;">
+            A premium cold-pressed juice and superfood wellness experience. Creating daily liquid therapy for a clean cellular lifestyle.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="services.html" class="footer-link">Sourcing Farms</a></li>
+            <li><a href="menu.html" class="footer-link">Menu List</a></li>
+            <li><a href="blog.html" class="footer-link">Journal</a></li>
+            <li><a href="contact.html" class="footer-link">Bar Locations</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">1-Day Reset Plan</a></li>
+            <li><a href="service-details.html" class="footer-link">3-Day Energy Program</a></li>
+            <li><a href="service-details.html" class="footer-link">7-Day Restoration</a></li>
+            <li><a href="contact.html" class="footer-link">Consultations</a></li>
+            <li><a href="coming-soon.html" class="footer-link">New Openings</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
+          <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>
+          <p class="text-muted fs-6 mb-2">pickup@verdevita.com</p>
+          <p class="text-muted fs-6 mb-4">+1 (310) 555-0199</p>
+          <span class="text-muted fs-6 d-block border-top pt-3">Mon - Sun: 7:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+
+      <div class="row mt-5 pt-4 border-top">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="text-muted fs-6 mb-0">&copy; 2026 Verde & Vita Inc. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+          <a href="404.html" class="footer-link me-3">Privacy Policy</a>
+          <a href="404.html" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-back-to-top" aria-label="Scroll Back to Top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  
+  <!-- Dynamic Modal Filler -->
+  <script>
+    function fillQuickView(title, price, img, ingredients, benefit, calories, protein, carbs) {
+      document.getElementById('qv-title').textContent = title;
+      document.getElementById('qv-price').textContent = price;
+      document.getElementById('qv-img').src = img;
+      document.getElementById('qv-ingredients').textContent = ingredients;
+      document.getElementById('qv-benefit').textContent = benefit;
+      document.getElementById('qv-calories').textContent = calories;
+      document.getElementById('qv-protein').textContent = protein;
+      document.getElementById('qv-carbs').textContent = carbs;
+    }
+  </script>
+</body>
+</html>

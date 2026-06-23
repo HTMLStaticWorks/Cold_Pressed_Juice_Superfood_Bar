@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verde & Vita - Log in to manage your cleanse orders and subscriptions.">
+  <title>Verde & Vita | Sign In</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="bg-soft-section">
+
+  <div class="custom-cursor"></div>
+
+  <main class="d-flex align-items-center justify-content-center min-vh-100">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="glass-card p-0 overflow-hidden shadow-lg border-0">
+            <div class="row g-0">
+              <!-- Left Column: Lifestyle Branding Graphic -->
+              <div class="col-md-6 d-none d-md-block position-relative">
+                <div class="w-100 h-100 bg-dark text-white p-5 d-flex flex-column justify-content-between position-relative" style="background-image: linear-gradient(rgba(37,95,59,0.7), rgba(0,0,0,0.85)), url('assets/images/lifestyle_wellness.png'); background-size: cover; background-position: center; min-height: 550px;">
+                  <a href="index.html" class="navbar-brand navbar-brand-custom text-white d-flex align-items-center gap-2">
+                    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="#ffffff"/>
+                    </svg>
+                    <span>Verde & Vita</span>
+                  </a>
+                  
+                  <div>
+                    <h2 class="display-6 font-weight-300 text-white mb-3" style="line-height: 1.2;">Nourish Your Future Self Today.</h2>
+                    <p class="text-white-50 small mb-0">Join the wellness circle to lock in fresh daily subscriptions and direct organic logistics.</p>
+                  </div>
+                  
+                  <span class="text-white-50 small">&copy; 2026 Verde & Vita</span>
+                </div>
+              </div>
+
+              <!-- Right Column: Login Form -->
+              <div class="col-md-6 p-5 bg-card d-flex flex-column justify-content-center">
+                <div class="text-center text-md-start mb-4">
+                  <h3 class="fs-2 text-brand-primary font-weight-600 mb-1">Welcome Back</h3>
+                  <p class="text-muted small">Sign in to your organic profile dashboard.</p>
+                </div>
+
+                <form id="login-form" novalidate onsubmit="event.preventDefault(); handleLoginSubmit();">
+                  <div class="mb-3 text-start">
+                    <label for="l-email" class="form-label text-brand-primary font-weight-500 small">Email Address</label>
+                    <input type="email" class="form-control rounded-3 border-color bg-transparent p-3" id="l-email" required>
+                    <div class="invalid-feedback">Please enter a valid email.</div>
+                  </div>
+
+                  <div class="mb-4 text-start position-relative">
+                    <div class="d-flex justify-content-between mb-1">
+                      <label for="l-password" class="form-label text-brand-primary font-weight-500 small mb-0">Password</label>
+                      <a href="404.html" class="small text-brand-primary">Forgot Password?</a>
+                    </div>
+                    <div class="input-group">
+                      <input type="password" class="form-control rounded-start-3 border-end-0 border-color bg-transparent p-3" id="l-password" required>
+                      <button type="button" class="btn btn-brand-outline border-start-0 border-color bg-transparent px-3 rounded-end-3 text-muted" onclick="togglePasswordVisibility()"><i class="bi bi-eye" id="eye-icon"></i></button>
+                    </div>
+                    <div class="invalid-feedback">Password is required.</div>
+                  </div>
+
+                  <div class="mb-4 d-flex justify-content-between align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="l-remember">
+                      <label class="form-check-label text-muted small" for="l-remember">Remember my profile</label>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-brand w-100 py-3 mb-4">Sign In Profile</button>
+                </form>
+
+                <!-- Social Authentication -->
+                <div class="text-center mb-4">
+                  <span class="text-muted small position-relative d-inline-block px-3" style="z-index: 1;">
+                    Or Sign In with
+                    <span class="position-absolute start-0 end-0 top-50 translate-middle-y bg-card" style="z-index: -1; height: 1px; width: 150%;"></span>
+                  </span>
+                </div>
+
+                <div class="row g-2">
+                  <div class="col-6">
+                    <button class="btn btn-brand-outline w-100 py-2 d-flex align-items-center justify-content-center gap-2"><i class="bi bi-google"></i> <span class="small">Google</span></button>
+                  </div>
+                  <div class="col-6">
+                    <button class="btn btn-brand-outline w-100 py-2 d-flex align-items-center justify-content-center gap-2"><i class="bi bi-apple"></i> <span class="small">Apple</span></button>
+                  </div>
+                </div>
+
+                <p class="text-center text-muted small mt-4 mb-0">New to the Circle? <a href="register.html" class="text-brand-primary font-weight-500">Sign Up Now</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  
+  <script>
+    function togglePasswordVisibility() {
+      const passwordInput = document.getElementById('l-password');
+      const eyeIcon = document.getElementById('eye-icon');
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.className = 'bi bi-eye-slash';
+      } else {
+        passwordInput.type = 'password';
+        eyeIcon.className = 'bi bi-eye';
+      }
+    }
+
+    function handleLoginSubmit() {
+      const form = document.getElementById('login-form');
+      form.classList.remove('was-validated');
+      
+      if (form.checkValidity() === false) {
+        form.classList.add('was-validated');
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</body>
+</html>

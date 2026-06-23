@@ -1,0 +1,70 @@
+/* RTL Specific CSS Overrides */
+
+html[dir="rtl"] {
+  text-align: right;
+}
+
+html[dir="rtl"] .navbar-brand-custom {
+  letter-spacing: normal;
+}
+
+html[dir="rtl"] .nav-link-custom::after {
+  left: auto;
+  right: 16px;
+}
+
+html[dir="rtl"] .hamburger-custom {
+  left: 0;
+  right: auto;
+}
+
+/* Align arrows and back-to-top positions */
+html[dir="rtl"] .btn-back-to-top {
+  right: auto;
+  left: 30px;
+}
+
+html[dir="rtl"] .footer-link:hover {
+  padding-left: 0;
+  padding-right: 8px;
+}
+
+/* Custom alignment for timeline */
+@media (min-width: 769px) {
+  html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-content {
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+  }
+  
+  html[dir="rtl"] .timeline-item:nth-child(even) .timeline-content {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+  }
+}
+
+/* Mirror icons for RTL */
+html[dir="rtl"] .bi-arrow-right::before {
+  content: "\f12f" !important; /* bootstrap-icons left arrow hex */
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .bi-arrow-left::before {
+  content: "\f138" !important; /* bootstrap-icons right arrow hex */
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+/* Adjust card badge spacing */
+html[dir="rtl"] .juice-card-badge {
+  left: auto;
+  right: 15px;
+}
+
+/* Flip margins for lists with checkmarks */
+html[dir="rtl"] ul {
+  padding-right: 2rem;
+  padding-left: 0;
+}

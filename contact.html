@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verde & Vita - Get in touch, order pickup, find bar locations and hours.">
+  <meta name="keywords" content="contact juice bar, address, hours, customer support">
+  <title>Verde & Vita | Connect With Us</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="custom-cursor"></div>
+  <div class="offcanvas-backdrop-custom"></div>
+
+  <!-- Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="index.html">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+          </svg>
+          <span>Verde & Vita</span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+                <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1: Parallax Split</a></li>
+                <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2: Product Story</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+          <button class="btn btn-sm btn-brand-outline py-1 px-3 d-none d-sm-inline-block rtl-toggle-btn">RTL</button>
+          <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+            <i class="bi bi-bag"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+          </button>
+          <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login"><i class="bi bi-person"></i></a>
+          <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
+    <div class="d-flex flex-column h-100 justify-content-between">
+      <ul class="navbar-nav gap-3 fs-3">
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home 2</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom animate" href="service-details.html">Cleanse Programs</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Brand</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="border-top pt-4">
+        <button class="toggle-icon-btn theme-toggle-btn mb-3"><i class="bi bi-moon-stars"></i></button>
+        <button class="btn btn-sm btn-brand-outline rtl-toggle-btn px-4 w-100 mb-3">RTL</button>
+        <a href="login.html" class="btn btn-brand w-100 py-3"><i class="bi bi-person me-2"></i>Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-custom" id="cart-drawer">
+    <div>
+      <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
+        <h4 class="mb-0 text-brand-primary font-weight-600">Your Order</h4>
+        <button class="btn-close" id="cart-close-btn" aria-label="Close Cart"></button>
+      </div>
+      <div id="cart-items-container" class="overflow-y-auto" style="max-height: 55vh;"></div>
+    </div>
+    <div class="border-top pt-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Subtotal</span>
+        <h4 class="mb-0 text-brand-primary font-weight-600" id="cart-subtotal">$0.00</h4>
+      </div>
+      <a href="menu.html" class="btn btn-brand w-100 py-3 mb-2">Proceed to Checkout</a>
+      <button class="btn btn-brand-outline w-100 py-3" onclick="document.getElementById('cart-close-btn').click();">Continue Shopping</button>
+    </div>
+  </div>
+
+  <main style="padding-top: 100px;">
+    <!-- Page Header -->
+    <section class="section-padding text-center" style="background-color: var(--bg-soft);">
+      <div class="container">
+        <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Get in Touch</span>
+        <h1 class="font-display-large text-brand-primary mb-3">Connect With Us</h1>
+        <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
+          Have questions about a cleanse plan? Need custom corporate packaging? Our nutritionists are here to help.
+        </p>
+      </div>
+    </section>
+
+    <!-- Split Content -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Left side Contact Form -->
+          <div class="col-lg-6 reveal-on-scroll">
+            <div class="glass-card p-5">
+              <h2 class="fs-3 text-brand-primary mb-2">Send a Message</h2>
+              <p class="text-muted small mb-4">We reply to all inquiries within 12 business hours.</p>
+              
+              <form id="contact-form" novalidate onsubmit="event.preventDefault(); handleFormSubmit();">
+                <div class="mb-3 text-start">
+                  <label for="c-name" class="form-label text-brand-primary font-weight-500 small">Full Name</label>
+                  <input type="text" class="form-control rounded-3 border-color bg-transparent p-3" id="c-name" placeholder="John Doe" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="mb-3 text-start">
+                  <label for="c-email" class="form-label text-brand-primary font-weight-500 small">Email Address</label>
+                  <input type="email" class="form-control rounded-3 border-color bg-transparent p-3" id="c-email" placeholder="name@domain.com" required>
+                  <div class="invalid-feedback">Please provide a valid email.</div>
+                </div>
+
+                <div class="mb-3 text-start">
+                  <label for="c-subject" class="form-label text-brand-primary font-weight-500 small">Subject</label>
+                  <select class="form-select rounded-3 border-color bg-transparent p-3" id="c-subject" required>
+                    <option value="" disabled selected>Select an option...</option>
+                    <option value="cleanse">Cleanse Program Inquiry</option>
+                    <option value="catering">Corporate / Private Events</option>
+                    <option value="feedback">General Feedback</option>
+                  </select>
+                  <div class="invalid-feedback">Please select a subject.</div>
+                </div>
+
+                <div class="mb-4 text-start">
+                  <label for="c-message" class="form-label text-brand-primary font-weight-500 small">Message Details</label>
+                  <textarea class="form-control rounded-3 border-color bg-transparent p-3" id="c-message" rows="5" placeholder="Your details here..." required></textarea>
+                  <div class="invalid-feedback">Please enter your message details.</div>
+                </div>
+
+                <button type="submit" class="btn btn-brand w-100 py-3">Submit Inquiry</button>
+              </form>
+
+              <!-- Success Alert -->
+              <div id="contact-success" class="alert alert-success border-0 rounded-pill mt-4 text-brand-primary" style="display: none; background-color: var(--color-primary-light);">
+                <i class="bi bi-check-circle-fill me-2"></i> Inquiry submitted successfully! We will connect soon.
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side Contact Details & Map -->
+          <div class="col-lg-6 reveal-on-scroll">
+            <!-- Details Grid -->
+            <div class="row g-4 mb-4 text-start">
+              <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                  <h4 class="fs-6 text-brand-primary font-weight-600 mb-2">Beverly Hills Flagship</h4>
+                  <p class="text-muted small mb-0">120 Fresh Greens Way, Beverly Hills, CA 90210</p>
+                  <p class="text-muted small mt-2">+1 (310) 555-0199</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="glass-card p-4 h-100">
+                  <h4 class="fs-6 text-brand-primary font-weight-600 mb-2">Hours of Extraction</h4>
+                  <p class="text-muted small mb-0">Monday - Sunday</p>
+                  <p class="text-brand-primary font-weight-600 small mt-1">7:00 AM - 8:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map Vector Placeholder -->
+            <div class="glass-card p-0 overflow-hidden position-relative" style="height: 350px;">
+              <!-- Simulated map styling -->
+              <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4 bg-soft-section">
+                <i class="bi bi-geo-alt display-2 text-brand-primary mb-3"></i>
+                <h4 class="text-brand-primary fs-5 font-weight-600">Beverly Hills, California</h4>
+                <p class="text-muted small mb-4">Interactive Maps API Container</p>
+                <a href="https://maps.google.com" target="_blank" class="btn btn-brand-outline py-2 px-4">Open Google Maps</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2 mb-4" href="index.html">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+            </svg>
+            <span>Verde & Vita</span>
+          </a>
+          <p class="text-muted mb-4 fs-6" style="max-width: 320px;">
+            A premium cold-pressed juice and superfood wellness experience. Creating daily liquid therapy for a clean cellular lifestyle.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="services.html" class="footer-link">Sourcing Farms</a></li>
+            <li><a href="menu.html" class="footer-link">Menu List</a></li>
+            <li><a href="blog.html" class="footer-link">Journal</a></li>
+            <li><a href="contact.html" class="footer-link">Bar Locations</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">1-Day Reset Plan</a></li>
+            <li><a href="service-details.html" class="footer-link">3-Day Energy Program</a></li>
+            <li><a href="service-details.html" class="footer-link">7-Day Restoration</a></li>
+            <li><a href="contact.html" class="footer-link">Consultations</a></li>
+            <li><a href="coming-soon.html" class="footer-link">New Openings</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
+          <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>
+          <p class="text-muted fs-6 mb-2">pickup@verdevita.com</p>
+          <p class="text-muted fs-6 mb-4">+1 (310) 555-0199</p>
+          <span class="text-muted fs-6 d-block border-top pt-3">Mon - Sun: 7:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+
+      <div class="row mt-5 pt-4 border-top">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="text-muted fs-6 mb-0">&copy; 2026 Verde & Vita Inc. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+          <a href="404.html" class="footer-link me-3">Privacy Policy</a>
+          <a href="404.html" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-back-to-top" aria-label="Scroll Back to Top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  
+  <script>
+    function handleFormSubmit() {
+      const form = document.getElementById('contact-form');
+      const alert = document.getElementById('contact-success');
+      
+      form.classList.remove('was-validated');
+      
+      if (form.checkValidity() === false) {
+        form.classList.add('was-validated');
+      } else {
+        alert.style.display = 'block';
+        form.reset();
+      }
+    }
+  </script>
+</body>
+</html>

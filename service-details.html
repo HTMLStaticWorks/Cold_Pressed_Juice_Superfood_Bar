@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verde & Vita - Cleanse program details, timelines, ingredients, and FAQs.">
+  <meta name="keywords" content="cleanse program, detox schedule, ingredients, FAQ, juice therapy">
+  <title>Verde & Vita | Cleanse Program Details</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+  <div class="custom-cursor"></div>
+  <div class="offcanvas-backdrop-custom"></div>
+
+  <!-- Header Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="index.html">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+          </svg>
+          <span>Verde & Vita</span>
+        </a>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+          <ul class="navbar-nav gap-2">
+            <li class="nav-item dropdown">
+              <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+              <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+                <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1: Parallax Split</a></li>
+                <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2: Product Story</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom active" href="service-details.html">Programs</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="d-flex align-items-center gap-2">
+          <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
+          <button class="btn btn-sm btn-brand-outline py-1 px-3 d-none d-sm-inline-block rtl-toggle-btn">RTL</button>
+          <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+            <i class="bi bi-bag"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+          </button>
+          <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login"><i class="bi bi-person"></i></a>
+          <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
+    <div class="d-flex flex-column h-100 justify-content-between">
+      <ul class="navbar-nav gap-3 fs-3">
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home 2</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom active" href="service-details.html">Cleanse Programs</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Brand</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="border-top pt-4">
+        <button class="toggle-icon-btn theme-toggle-btn mb-3"><i class="bi bi-moon-stars"></i></button>
+        <button class="btn btn-sm btn-brand-outline rtl-toggle-btn px-4 w-100 mb-3">RTL</button>
+        <a href="login.html" class="btn btn-brand w-100 mt-4 py-3"><i class="bi bi-person me-2"></i>Sign In</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div class="cart-drawer-custom" id="cart-drawer">
+    <div>
+      <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
+        <h4 class="mb-0 text-brand-primary font-weight-600">Your Order</h4>
+        <button class="btn-close" id="cart-close-btn" aria-label="Close Cart"></button>
+      </div>
+      <div id="cart-items-container" class="overflow-y-auto" style="max-height: 55vh;"></div>
+    </div>
+    <div class="border-top pt-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="text-muted">Subtotal</span>
+        <h4 class="mb-0 text-brand-primary font-weight-600" id="cart-subtotal">$0.00</h4>
+      </div>
+      <a href="menu.html" class="btn btn-brand w-100 py-3 mb-2">Proceed to Checkout</a>
+      <button class="btn btn-brand-outline w-100 py-3" onclick="document.getElementById('cart-close-btn').click();">Continue Shopping</button>
+    </div>
+  </div>
+
+  <main style="padding-top: 100px;">
+    <!-- Program Summary Header -->
+    <section class="section-padding" style="background-color: var(--bg-soft);">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal-on-scroll">
+            <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Nutrition Program</span>
+            <h1 class="font-display-large text-brand-primary mb-3">The Signature Cleanse</h1>
+            <p class="text-muted fs-5 mb-4">
+              A comprehensive system of organic raw juices and boosters formulated to systematically rest the digestive tract, clear skin pores, and flush excess glucose.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="menu.html" class="btn btn-brand px-5 py-3">Book Your Pack</a>
+              <a href="#schedule" class="btn btn-brand-outline px-5 py-3">View Daily Schedule</a>
+            </div>
+          </div>
+          <div class="col-lg-6 reveal-on-scroll">
+            <img src="assets/images/lifestyle_wellness.png" alt="Cleanse Program bottles group" class="img-fluid rounded-4 shadow-sm">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cleanse Timetable / Process -->
+    <section class="section-padding" id="schedule">
+      <div class="container text-center">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-6 reveal-on-scroll">
+            <span class="text-brand-primary font-weight-600 text-uppercase tracking-wide" style="font-size: 13px;">Daily Sequence</span>
+            <h2 class="h2-title mb-3">Hour-by-Hour Ritual</h2>
+            <p class="text-muted">For optimal gut healing and cellular assimilation, drink elixirs in the following chronological sequence every 2.5 hours.</p>
+          </div>
+        </div>
+
+        <div class="timeline-vertical">
+          <!-- Item 1 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-brand-primary font-weight-600">08:00 AM</span>
+              <h3 class="fs-4 my-2 text-brand-primary">Morning Wake Elixir</h3>
+              <p class="text-muted mb-2"><strong>Immunity Blend:</strong> Turmeric, Ginger, Apple, Lemon.</p>
+              <p class="text-muted small mb-0">Ignites hepatic enzymes, increases metabolic circulation, and sets a high alkalinity base.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-brand-primary font-weight-600">10:30 AM</span>
+              <h3 class="fs-4 my-2 text-brand-primary">Mid-Morning Restore</h3>
+              <p class="text-muted mb-2"><strong>Green Detox:</strong> Spinach, Kale, Celery, Cucumber, Parsley.</p>
+              <p class="text-muted small mb-0">Floods circulation with raw chlorophyll, iron, and active electrolytes to power mental focus.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-brand-primary font-weight-600">01:00 PM</span>
+              <h3 class="fs-4 my-2 text-brand-primary">Midday Vitality</h3>
+              <p class="text-muted mb-2"><strong>Tropical Energy:</strong> Pineapple, Mango, Passion Fruit, Orange.</p>
+              <p class="text-muted small mb-0">Complex enzymes and natural bromelain to support digestion and restore high natural glucose.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-brand-primary font-weight-600">03:30 PM</span>
+              <h3 class="fs-4 my-2 text-brand-primary">Afternoon Glow</h3>
+              <p class="text-muted mb-2"><strong>Berry Boost:</strong> Strawberry, Pomegranate, Beetroot, Red Apple.</p>
+              <p class="text-muted small mb-0">High anthocyanins and anti-oxidants to speed muscle recovery and stimulate outer skin radiance.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="timeline-item reveal-on-scroll">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="text-brand-primary font-weight-600">06:00 PM</span>
+              <h3 class="fs-4 my-2 text-brand-primary">Sunset Calm</h3>
+              <p class="text-muted mb-2"><strong>Green Detox:</strong> Spinach, Celery, Cucumber, Ginger, Lime.</p>
+              <p class="text-muted small mb-0">Calms gastrointestinal systems, flushes residual sodium, and prepares muscles for night rest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section-padding bg-soft-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 text-center">
+          <div class="col-lg-6 reveal-on-scroll">
+            <span class="text-brand-primary font-weight-600 text-uppercase tracking-wide" style="font-size: 13px;">Knowledge Hub</span>
+            <h2 class="h2-title">Frequently Asked Questions</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8 reveal-on-scroll">
+            <div class="accordion accordion-flush" id="cleanseFaq">
+              <!-- Q1 -->
+              <div class="accordion-item bg-transparent border-bottom py-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-brand-primary font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="false" aria-controls="faq-1">
+                    Can I consume solid foods during the cleanse program?
+                  </button>
+                </h2>
+                <div id="faq-1" class="accordion-collapse collapse" data-bs-parent="#cleanseFaq">
+                  <div class="accordion-body px-0 text-muted">
+                    For optimal biological results, we recommend sticking exclusively to the organic juices and water. If hunger persists, raw organic celery stalks, cucumber slices, or a handful of raw almonds are acceptable.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q2 -->
+              <div class="accordion-item bg-transparent border-bottom py-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-brand-primary font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
+                    How long do the raw juices remain fresh?
+                  </button>
+                </h2>
+                <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#cleanseFaq">
+                  <div class="accordion-body px-0 text-muted">
+                    Since our juices are 100% raw and undergo no heating or synthetic pasteurization, they have a refrigerated shelf-life of 4 to 5 days. Keep them constantly chilled at 38°F (3°C).
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q3 -->
+              <div class="accordion-item bg-transparent border-bottom py-3">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed bg-transparent text-brand-primary font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                    Is the glass bottle return program operational for deliveries?
+                  </button>
+                </h2>
+                <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#cleanseFaq">
+                  <div class="accordion-body px-0 text-muted">
+                    Yes. When your next cleanse package is delivered, place your cleaned glass bottles in the provided cotton bag and leave them at your door. Our logistics team will swap them and apply a $1.00 credit per bottle to your account.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-custom">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2 mb-4" href="index.html">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+            </svg>
+            <span>Verde & Vita</span>
+          </a>
+          <p class="text-muted mb-4 fs-6" style="max-width: 320px;">
+            A premium cold-pressed juice and superfood wellness experience. Creating daily liquid therapy for a clean cellular lifestyle.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-brand-primary" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="about.html" class="footer-link">Our Story</a></li>
+            <li><a href="services.html" class="footer-link">Sourcing Farms</a></li>
+            <li><a href="menu.html" class="footer-link">Menu List</a></li>
+            <li><a href="blog.html" class="footer-link">Journal</a></li>
+            <li><a href="contact.html" class="footer-link">Bar Locations</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="service-details.html" class="footer-link">1-Day Reset Plan</a></li>
+            <li><a href="service-details.html" class="footer-link">3-Day Energy Program</a></li>
+            <li><a href="service-details.html" class="footer-link">7-Day Restoration</a></li>
+            <li><a href="contact.html" class="footer-link">Consultations</a></li>
+            <li><a href="coming-soon.html" class="footer-link">New Openings</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
+          <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>
+          <p class="text-muted fs-6 mb-2">pickup@verdevita.com</p>
+          <p class="text-muted fs-6 mb-4">+1 (310) 555-0199</p>
+          <span class="text-muted fs-6 d-block border-top pt-3">Mon - Sun: 7:00 AM - 8:00 PM</span>
+        </div>
+      </div>
+
+      <div class="row mt-5 pt-4 border-top">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="text-muted fs-6 mb-0">&copy; 2026 Verde & Vita Inc. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+          <a href="404.html" class="footer-link me-3">Privacy Policy</a>
+          <a href="404.html" class="footer-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="btn-back-to-top" aria-label="Scroll Back to Top">
+    <i class="bi bi-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

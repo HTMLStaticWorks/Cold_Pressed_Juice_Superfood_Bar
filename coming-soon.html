@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Verde & Vita - Launching our organic cold-pressed wellness bar soon. Join the waitlist.">
+  <title>Verde & Vita | Juices Flowing Soon</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="bg-soft-section">
+
+  <div class="custom-cursor"></div>
+
+  <main class="d-flex align-items-center justify-content-center min-vh-100 text-center">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="glass-card p-5">
+            <!-- Brand Logo -->
+            <div class="d-flex justify-content-center align-items-center gap-2 mb-4">
+              <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+              </svg>
+              <span class="navbar-brand navbar-brand-custom fs-2">Verde & Vita</span>
+            </div>
+
+            <h1 class="h2-title text-brand-primary mb-3">Juices Flowing Soon</h1>
+            <p class="text-muted mb-5 mx-auto" style="max-width: 500px;">
+              Our organic hydraulic presses are being calibrated. Subscribe below to join our early waitlist and get opening day perks.
+            </p>
+
+            <!-- Countdown Timer Grid -->
+            <div class="row g-2 justify-content-center mb-5 countdown-wrap">
+              <div class="col-3 col-sm-2">
+                <div class="glass-card p-3">
+                  <h3 class="display-6 text-brand-primary mb-0" id="countdown-days">00</h3>
+                  <span class="small text-muted d-block mt-1">Days</span>
+                </div>
+              </div>
+              <div class="col-3 col-sm-2">
+                <div class="glass-card p-3">
+                  <h3 class="display-6 text-brand-primary mb-0" id="countdown-hours">00</h3>
+                  <span class="small text-muted d-block mt-1">Hours</span>
+                </div>
+              </div>
+              <div class="col-3 col-sm-2">
+                <div class="glass-card p-3">
+                  <h3 class="display-6 text-brand-primary mb-0" id="countdown-minutes">00</h3>
+                  <span class="small text-muted d-block mt-1">Mins</span>
+                </div>
+              </div>
+              <div class="col-3 col-sm-2">
+                <div class="glass-card p-3">
+                  <h3 class="display-6 text-brand-primary mb-0" id="countdown-seconds">00</h3>
+                  <span class="small text-muted d-block mt-1">Secs</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Early Waitlist Subscription -->
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <form class="input-group glass-card p-1 rounded-pill" style="border-radius: 50px;" onsubmit="event.preventDefault(); document.getElementById('waitlist-success').style.display='block'; this.reset();">
+                  <input type="email" class="form-control border-0 bg-transparent ps-4 py-3" placeholder="Enter your email address" required style="font-size: 15px;">
+                  <button type="submit" class="btn btn-brand py-3 px-4 rounded-pill">Notify Me</button>
+                </form>
+                
+                <div id="waitlist-success" class="alert alert-success border-0 rounded-pill mt-4 text-brand-primary" style="display: none; background-color: var(--color-primary-light);">
+                  <i class="bi bi-check-circle-fill me-2"></i> Added to early access waitlist! We will alert you.
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="d-flex justify-content-center gap-4 mt-5 fs-4">
+              <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

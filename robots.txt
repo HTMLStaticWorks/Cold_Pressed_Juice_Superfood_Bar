@@ -1,0 +1,6 @@
+# robots.txt for Verde & Vita Website Template
+User-agent: *
+Allow: /
+
+# Sitemap reference
+Sitemap: https://verdevita.com/sitemap.xml
