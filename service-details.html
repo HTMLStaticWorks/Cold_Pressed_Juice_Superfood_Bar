@@ -8,7 +8,7 @@
   <title>Verde & Vita | Cleanse Program Details</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Bootstrap 5 CSS CDN -->
   <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -17,6 +17,38 @@
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    /* Accordion Custom Styling */
+    .accordion-button {
+      color: var(--text-main) !important;
+    }
+    .accordion-button:focus {
+      box-shadow: none !important;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: transparent !important;
+      color: var(--color-primary) !important;
+    }
+    [data-theme="dark"] .accordion-button:not(.collapsed) {
+      color: var(--color-success) !important;
+    }
+    [data-theme="dark"] .accordion-button::after {
+      filter: invert(1) grayscale(1) brightness(2);
+    }
+    
+    /* Dropdown Custom Styling */
+    .dropdown-item {
+      color: var(--text-main) !important;
+      transition: var(--transition-smooth);
+    }
+    .dropdown-item:hover, .dropdown-item:focus {
+      background-color: var(--bg-soft) !important;
+      color: var(--color-primary) !important;
+    }
+    [data-theme="dark"] .dropdown-item:hover, [data-theme="dark"] .dropdown-item:focus {
+      color: var(--color-success) !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,71 +57,95 @@
 
   <!-- Header Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container">
-        <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="index.html">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
-          </svg>
-          <span>Verde & Vita</span>
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+   <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand navbar-brand-custom" href="index.html">
+     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+      <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+      <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
+     </svg>
+     <span>Verde & Vita</span>
+    </a>
 
-        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
-          <ul class="navbar-nav gap-2">
-            <li class="nav-item dropdown">
-              <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-              <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
-                <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1: Parallax Split</a></li>
-                <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2: Product Story</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom active" href="service-details.html">Programs</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+     <ul class="navbar-nav gap-2">
+      <li class="nav-item dropdown">
+       <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a>
+       <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+        <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+        <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+       </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom active" href="service-details.html">Programs</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+     </ul>
+    </div>
 
-        <div class="d-flex align-items-center gap-2">
-          <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
-          <button class="btn btn-sm btn-brand-outline py-1 px-3 d-none d-sm-inline-block rtl-toggle-btn">RTL</button>
-          <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
-            <i class="bi bi-bag"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
-          </button>
-          <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login"><i class="bi bi-person"></i></a>
-          <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <!-- Header Actions -->
+    <div class="d-flex align-items-center gap-2">
+     <!-- Light/Dark Toggle -->
+     <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme">
+      <i class="bi bi-moon-stars"></i>
+     </button>
+     
+     <!-- RTL Toggle -->
+     <button class="toggle-icon-btn rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
+
+     <!-- Shopping Cart Toggle -->
+     <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+      <i class="bi bi-bag"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+     </button>
+
+     <!-- Profile Link -->
+     <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login">
+      <i class="bi bi-person"></i>
+     </a>
+
+     <!-- Hamburger Button (Mobile Only) -->
+     <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+     </button>
+    </div>
+   </div>
+  </nav>
+ </header>
 
   <!-- Mobile Offcanvas Menu -->
   <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
-    <div class="d-flex flex-column h-100 justify-content-between">
-      <ul class="navbar-nav gap-3 fs-3">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="service-details.html">Cleanse Programs</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Brand</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="border-top pt-4">
-        <button class="toggle-icon-btn theme-toggle-btn mb-3"><i class="bi bi-moon-stars"></i></button>
-        <button class="btn btn-sm btn-brand-outline rtl-toggle-btn px-4 w-100 mb-3">RTL</button>
-        <a href="login.html" class="btn btn-brand w-100 mt-4 py-3"><i class="bi bi-person me-2"></i>Sign In</a>
+    <!-- Close Button -->
+    <button class="btn-close position-absolute top-0 end-0 m-4" aria-label="Close Menu" onclick="document.querySelector('.hamburger-custom').click();" style="font-size: 18px; z-index: 10;"></button>
+  <div class="d-flex flex-column h-100 justify-content-between">
+   <ul class="navbar-nav gap-3 fs-3">
+    <li class="nav-item dropdown">
+     <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Home</span> <i class="bi bi-chevron-down" style="font-size: 14px;"></i></a>
+     <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+      <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+      <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+     </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom active" href="service-details.html">Programs</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+   </ul>
+   <div class="border-top pt-4">
+
+        <a href="login.html" class="btn btn-brand w-100 mt-4 py-3"><i class="bi bi-person me-2"></i>Sign In / Join</a>
       </div>
-    </div>
   </div>
+ </div>
 
   <!-- Cart Drawer -->
   <div class="cart-drawer-custom" id="cart-drawer">
@@ -112,34 +168,135 @@
 
   <main style="padding-top: 100px;">
     <!-- Program Summary Header -->
-    <section class="section-padding" style="background-color: var(--bg-soft);">
+    <section class="section-padding text-center position-relative" style="background-image: linear-gradient(rgba(15, 25, 18, 0.65), rgba(15, 25, 18, 0.65)), url('assets/images/programs_hero_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 140px; padding-bottom: 140px;">
+      <div class="container position-relative" style="z-index: 2;">
+        <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Nutrition Programs</span>
+        <h1 class="font-display-large text-white mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">The Signature Cleanse</h1>
+        <p class="text-white fs-5 mx-auto mb-4" style="max-width: 600px; opacity: 0.9; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+          A comprehensive system of organic raw juices and boosters formulated to systematically rest the digestive tract, clear skin pores, and flush excess glucose.
+        </p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="#packages" class="btn btn-brand px-5 py-3">Book Your Pack</a>
+          <a href="#schedule" class="btn btn-brand-outline text-white border-white-50 px-5 py-3" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(4px);">View Daily Schedule</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Choose Your Program / Cleanse Packages -->
+    <section class="section-padding" id="packages">
       <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-6 reveal-on-scroll">
-            <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Nutrition Program</span>
-            <h1 class="font-display-large text-brand-primary mb-3">The Signature Cleanse</h1>
-            <p class="text-muted fs-5 mb-4">
-              A comprehensive system of organic raw juices and boosters formulated to systematically rest the digestive tract, clear skin pores, and flush excess glucose.
-            </p>
-            <div class="d-flex flex-wrap gap-3">
-              <a href="menu.html" class="btn btn-brand px-5 py-3">Book Your Pack</a>
-              <a href="#schedule" class="btn btn-brand-outline px-5 py-3">View Daily Schedule</a>
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-6 text-center reveal-on-scroll">
+            <span class="text-brand-primary font-weight-600 text-uppercase tracking-wide" style="font-size: 13px;">Find Your Path</span>
+            <h2 class="h2-title mb-3">Choose Your Program</h2>
+            <p class="text-muted">Select the cleanse duration that matches your health goals. Each program includes daily raw cold-pressed juices and instructional support.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- 1 Day Cleanse -->
+          <div class="col-lg-4 col-md-6 reveal-on-scroll">
+            <div class="glass-card h-100 d-flex flex-column justify-content-between p-4">
+              <div>
+                <span class="badge bg-soft text-brand-primary border px-3 py-2 rounded-pill mb-3">Beginner Friendly</span>
+                <h3 class="fs-4 text-brand-primary mb-2">1 Day Cleanse</h3>
+                <p class="text-muted small mb-4">A gentle introduction to cleansing. Perfect for resetting after a heavy weekend, reducing immediate bloating, and restoring digestive clarity.</p>
+                <div class="d-flex align-items-baseline mb-4">
+                  <span class="fs-2 font-weight-600 text-brand-primary">$65</span>
+                  <span class="text-muted ms-2">/ one-time purchase</span>
+                </div>
+                <ul class="list-unstyled mb-4 text-muted small d-flex flex-column gap-2">
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle text-brand-primary"></i>
+                    <span>6 cold-pressed juices (16 oz each)</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle text-brand-primary"></i>
+                    <span>1 morning metabolic booster shot</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle text-brand-primary"></i>
+                    <span>Digital preparation & transition guide</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="menu.html" class="btn btn-brand-outline w-100 text-center py-3">Order 1-Day Pass</a>
             </div>
           </div>
-          <div class="col-lg-6 reveal-on-scroll">
-            <img src="assets/images/lifestyle_wellness.png" alt="Cleanse Program bottles group" class="img-fluid rounded-4 shadow-sm">
+
+          <!-- 3 Day Reset -->
+          <div class="col-lg-4 col-md-6 reveal-on-scroll">
+            <div class="glass-card h-100 d-flex flex-column justify-content-between p-4" style="border: 2px solid var(--color-primary) !important;">
+              <div>
+                <div class="text-center mb-3">
+                  <span class="text-white px-4 py-2 rounded-pill font-weight-600 d-inline-block" style="background-color: var(--color-primary); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;">Most Popular</span>
+                </div>
+                <span class="badge bg-soft text-brand-primary border px-3 py-2 rounded-pill mb-3">Deep Restore</span>
+                <h3 class="fs-4 text-brand-primary mb-2">3 Day Reset</h3>
+                <p class="text-muted small mb-4">Our signature wellness program. Reaches deeper cellular waste, boosts immunity, clears skin complexion, and recalibrates sugar cravings.</p>
+                <div class="d-flex align-items-baseline mb-4">
+                  <span class="fs-2 font-weight-600 text-brand-primary">$180</span>
+                  <span class="text-muted ms-2">/ reset kit</span>
+                </div>
+                <ul class="list-unstyled mb-4 text-muted small d-flex flex-column gap-2">
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-brand-primary"></i>
+                    <span>18 cold-pressed juices (16 oz each)</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-brand-primary"></i>
+                    <span>3 ginger-turmeric immunity shots</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle-fill text-brand-primary"></i>
+                    <span>Cleanse coach support via chat</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="menu.html" class="btn btn-brand w-100 text-center py-3">Order 3-Day Reset</a>
+            </div>
+          </div>
+
+          <!-- 7 Day Wellness Program -->
+          <div class="col-lg-4 col-md-6 reveal-on-scroll">
+            <div class="glass-card h-100 d-flex flex-column justify-content-between p-4">
+              <div>
+                <span class="badge bg-soft text-brand-primary border px-3 py-2 rounded-pill mb-3">Habit Transformation</span>
+                <h3 class="fs-4 text-brand-primary mb-2">7 Day Wellness Program</h3>
+                <p class="text-muted small mb-4">The ultimate metabolic shift. Facilitates complete digestive tract healing, reduces chronic inflammation, and cultivates lasting clean energy.</p>
+                <div class="d-flex align-items-baseline mb-4">
+                  <span class="fs-2 font-weight-600 text-brand-primary">$395</span>
+                  <span class="text-muted ms-2">/ complete program</span>
+                </div>
+                <ul class="list-unstyled mb-4 text-muted small d-flex flex-column gap-2">
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle text-brand-primary"></i>
+                    <span>42 cold-pressed juices (16 oz each)</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle text-brand-primary"></i>
+                    <span>7 clinical-grade booster shots</span>
+                  </li>
+                  <li class="d-flex align-items-center gap-2">
+                    <i class="bi bi-check-circle text-brand-primary"></i>
+                    <span>1-on-1 nutritional video consultation</span>
+                  </li>
+                </ul>
+              </div>
+              <a href="menu.html" class="btn btn-brand-outline w-100 text-center py-3">Order 7-Day Journey</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Cleanse Timetable / Process -->
-    <section class="section-padding" id="schedule">
+    <!-- Cleanse Timetable / Process (How It Works) -->
+    <section class="section-padding bg-soft-section" id="schedule">
       <div class="container text-center">
         <div class="row justify-content-center mb-5">
           <div class="col-lg-6 reveal-on-scroll">
-            <span class="text-brand-primary font-weight-600 text-uppercase tracking-wide" style="font-size: 13px;">Daily Sequence</span>
-            <h2 class="h2-title mb-3">Hour-by-Hour Ritual</h2>
+            <span class="text-brand-primary font-weight-600 text-uppercase tracking-wide" style="font-size: 13px;">How It Works</span>
+            <h2 class="h2-title mb-3">The Cleanse Ritual Sequence</h2>
             <p class="text-muted">For optimal gut healing and cellular assimilation, drink elixirs in the following chronological sequence every 2.5 hours.</p>
           </div>
         </div>
@@ -203,6 +360,65 @@
       </div>
     </section>
 
+    <!-- Core Health Benefits -->
+    <section class="section-padding" id="benefits">
+      <div class="container">
+        <div class="row justify-content-center mb-5 text-center">
+          <div class="col-lg-6 reveal-on-scroll">
+            <span class="text-brand-primary font-weight-600 text-uppercase tracking-wide" style="font-size: 13px;">Benefits</span>
+            <h2 class="h2-title mb-3">Core Health Benefits</h2>
+            <p class="text-muted">Explore how deep cellular purification resets your metabolic baseline and shifts your biology toward peak vibrancy.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Benefit 1 -->
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="glass-card text-center p-4 h-100">
+              <div class="d-inline-flex align-items-center justify-content-center bg-soft rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-heart-pulse text-brand-primary fs-2"></i>
+              </div>
+              <h3 class="fs-5 text-brand-primary mb-3">Digestive Healing</h3>
+              <p class="text-muted small mb-0">Giving your digestive organs a complete rest from solid breakdown allows the gut mucosal barrier to heal, rebuild gut flora, and reduce systemic bloating.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="glass-card text-center p-4 h-100">
+              <div class="d-inline-flex align-items-center justify-content-center bg-soft rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-shield-check text-brand-primary fs-2"></i>
+              </div>
+              <h3 class="fs-5 text-brand-primary mb-3">Immune Defense</h3>
+              <p class="text-muted small mb-0">Floods your vascular systems with cold-extracted vitamins, minerals, and bio-active enzymes that directly boost immune defense mechanisms.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="glass-card text-center p-4 h-100">
+              <div class="d-inline-flex align-items-center justify-content-center bg-soft rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-stars text-brand-primary fs-2"></i>
+              </div>
+              <h3 class="fs-5 text-brand-primary mb-3">Skin Radiance</h3>
+              <p class="text-muted small mb-0">By systematically flushing metabolic waste and infusing dense microhydration, cells detoxify, leaving skin looking visibly glowing, firm, and dewy.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="col-lg-3 col-md-6 reveal-on-scroll">
+            <div class="glass-card text-center p-4 h-100">
+              <div class="d-inline-flex align-items-center justify-content-center bg-soft rounded-circle mb-4" style="width: 70px; height: 70px;">
+                <i class="bi bi-lightning-charge text-brand-primary fs-2"></i>
+              </div>
+              <h3 class="fs-5 text-brand-primary mb-3">Sustained Stamina</h3>
+              <p class="text-muted small mb-0">Cleanses substitute heavy carbs and processed sugar with slow-burn raw fructose, restoring natural focus levels and eliminating caffeine crashes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ Accordion -->
     <section class="section-padding bg-soft-section">
       <div class="container">
@@ -219,7 +435,7 @@
               <!-- Q1 -->
               <div class="accordion-item bg-transparent border-bottom py-3">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed bg-transparent text-brand-primary font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="false" aria-controls="faq-1">
+                  <button class="accordion-button collapsed bg-transparent font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="false" aria-controls="faq-1">
                     Can I consume solid foods during the cleanse program?
                   </button>
                 </h2>
@@ -233,7 +449,7 @@
               <!-- Q2 -->
               <div class="accordion-item bg-transparent border-bottom py-3">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed bg-transparent text-brand-primary font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
+                  <button class="accordion-button collapsed bg-transparent font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">
                     How long do the raw juices remain fresh?
                   </button>
                 </h2>
@@ -247,7 +463,7 @@
               <!-- Q3 -->
               <div class="accordion-item bg-transparent border-bottom py-3">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed bg-transparent text-brand-primary font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
+                  <button class="accordion-button collapsed bg-transparent font-weight-600 fs-5 px-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">
                     Is the glass bottle return program operational for deliveries?
                   </button>
                 </h2>
@@ -268,10 +484,13 @@
   <footer class="footer-custom">
     <div class="container">
       <div class="row g-5">
+        <!-- Logo & Brand statement -->
         <div class="col-lg-4 col-md-6">
-          <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2 mb-4" href="index.html">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+          <a class="navbar-brand navbar-brand-custom mb-4" href="index.html">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+              <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+              <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <span>Verde & Vita</span>
           </a>
@@ -281,11 +500,11 @@
           <div class="d-flex gap-3 fs-5">
             <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
+        <!-- Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -297,6 +516,7 @@
           </ul>
         </div>
 
+        <!-- Resources -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -308,6 +528,7 @@
           </ul>
         </div>
 
+        <!-- Contact details -->
         <div class="col-lg-4 col-md-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
           <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>

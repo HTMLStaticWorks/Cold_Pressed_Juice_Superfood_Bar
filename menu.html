@@ -8,7 +8,7 @@
   <title>Verde & Vita | Live Juice Menu</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Bootstrap 5 CSS CDN -->
   <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -17,6 +17,33 @@
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    /* Customizer Option Styling */
+    .btn-check:checked + .btn-brand-outline {
+      background-color: var(--color-primary) !important;
+      color: var(--bg-main) !important;
+      border-color: var(--color-primary) !important;
+      box-shadow: 0 4px 12px rgba(37, 95, 59, 0.15);
+    }
+    
+    /* Accordion Custom Styling */
+    .accordion-button {
+      color: var(--text-main) !important;
+    }
+    .accordion-button:focus {
+      box-shadow: none !important;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: transparent !important;
+      color: var(--color-primary) !important;
+    }
+    [data-theme="dark"] .accordion-button:not(.collapsed) {
+      color: var(--color-success) !important;
+    }
+    [data-theme="dark"] .accordion-button::after {
+      filter: invert(1) grayscale(1) brightness(2);
+    }
+  </style>
 </head>
 <body>
 
@@ -25,71 +52,95 @@
 
   <!-- Header Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container">
-        <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="index.html">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
-          </svg>
-          <span>Verde & Vita</span>
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+   <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand navbar-brand-custom" href="index.html">
+     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+      <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+      <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
+     </svg>
+     <span>Verde & Vita</span>
+    </a>
 
-        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
-          <ul class="navbar-nav gap-2">
-            <li class="nav-item dropdown">
-              <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-              <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
-                <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1: Parallax Split</a></li>
-                <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2: Product Story</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link nav-link-custom active" href="menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+     <ul class="navbar-nav gap-2">
+      <li class="nav-item dropdown">
+       <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a>
+       <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+        <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+        <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+       </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom active" href="menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+     </ul>
+    </div>
 
-        <div class="d-flex align-items-center gap-2">
-          <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
-          <button class="btn btn-sm btn-brand-outline py-1 px-3 d-none d-sm-inline-block rtl-toggle-btn">RTL</button>
-          <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
-            <i class="bi bi-bag"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
-          </button>
-          <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login"><i class="bi bi-person"></i></a>
-          <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <!-- Header Actions -->
+    <div class="d-flex align-items-center gap-2">
+     <!-- Light/Dark Toggle -->
+     <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme">
+      <i class="bi bi-moon-stars"></i>
+     </button>
+     
+     <!-- RTL Toggle -->
+     <button class="toggle-icon-btn rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
+
+     <!-- Shopping Cart Toggle -->
+     <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+      <i class="bi bi-bag"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+     </button>
+
+     <!-- Profile Link -->
+     <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login">
+      <i class="bi bi-person"></i>
+     </a>
+
+     <!-- Hamburger Button (Mobile Only) -->
+     <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+     </button>
+    </div>
+   </div>
+  </nav>
+ </header>
 
   <!-- Mobile Offcanvas Menu -->
   <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
-    <div class="d-flex flex-column h-100 justify-content-between">
-      <ul class="navbar-nav gap-3 fs-3">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="menu.html">Menu</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Cleanse Programs</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Brand</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="border-top pt-4">
-        <button class="toggle-icon-btn theme-toggle-btn mb-3"><i class="bi bi-moon-stars"></i></button>
-        <button class="btn btn-sm btn-brand-outline rtl-toggle-btn px-4 w-100 mb-3">RTL</button>
-        <a href="login.html" class="btn btn-brand w-100 py-3"><i class="bi bi-person me-2"></i>Sign In</a>
+    <!-- Close Button -->
+    <button class="btn-close position-absolute top-0 end-0 m-4" aria-label="Close Menu" onclick="document.querySelector('.hamburger-custom').click();" style="font-size: 18px; z-index: 10;"></button>
+  <div class="d-flex flex-column h-100 justify-content-between">
+   <ul class="navbar-nav gap-3 fs-3">
+    <li class="nav-item dropdown">
+     <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Home</span> <i class="bi bi-chevron-down" style="font-size: 14px;"></i></a>
+     <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+      <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+      <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+     </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom active" href="menu.html">Menu</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+   </ul>
+   <div class="border-top pt-4">
+
+        <a href="login.html" class="btn btn-brand w-100 mt-4 py-3"><i class="bi bi-person me-2"></i>Sign In / Join</a>
       </div>
-    </div>
   </div>
+ </div>
 
   <!-- Cart Drawer -->
   <div class="cart-drawer-custom" id="cart-drawer">
@@ -112,20 +163,25 @@
 
   <main style="padding-top: 100px;">
     <!-- Menu Title -->
-    <section class="section-padding text-center" style="background-color: var(--bg-soft);">
-      <div class="container">
+    <section class="section-padding text-center position-relative" style="background-image: linear-gradient(rgba(15, 25, 18, 0.65), rgba(15, 25, 18, 0.65)), url('assets/images/menu_hero_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 140px; padding-bottom: 140px;">
+      <div class="container position-relative" style="z-index: 2;">
         <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Daily Pressed</span>
-        <h1 class="font-display-large text-brand-primary mb-3">The Juice & Bowl Menu</h1>
-        <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
+        <h1 class="font-display-large text-white mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">The Juice & Bowl Menu</h1>
+        <p class="text-white fs-5 mx-auto" style="max-width: 600px; opacity: 0.9; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">
           Choose your liquid medicine. Organic veggies, fresh seeds, roots, and pure unheated nutrients.
         </p>
 
         <!-- Search Bar -->
         <div class="row justify-content-center mt-5">
           <div class="col-md-6 col-lg-5">
-            <div class="input-group glass-card p-1 rounded-pill" style="border-radius: 50px;">
-              <span class="input-group-text border-0 bg-transparent ps-3"><i class="bi bi-search text-muted"></i></span>
-              <input type="text" class="form-control border-0 bg-transparent" id="menu-search-input" placeholder="Search juices or ingredients..." aria-label="Search items">
+            <div class="input-group glass-card p-1 rounded-pill" style="border-radius: 50px; background: rgba(255, 255, 255, 0.15); border-color: rgba(255, 255, 255, 0.25); backdrop-filter: blur(12px);">
+              <span class="input-group-text border-0 bg-transparent ps-3"><i class="bi bi-search text-white-50"></i></span>
+              <input type="text" class="form-control border-0 bg-transparent text-white" id="menu-search-input" placeholder="Search juices or ingredients..." aria-label="Search items" style="color: #ffffff !important;">
+              <style>
+                #menu-search-input::placeholder {
+                  color: rgba(255, 255, 255, 0.6) !important;
+                }
+              </style>
             </div>
           </div>
         </div>
@@ -136,28 +192,49 @@
     <section class="section-padding">
       <div class="container">
         <!-- Category Navigation Pills -->
+        <!-- Category Navigation Pills -->
         <div class="d-flex justify-content-center flex-wrap menu-nav-pills mb-5">
           <button class="nav-link active" data-filter="all">All Items</button>
-          <button class="nav-link" data-filter="detox">Detox</button>
-          <button class="nav-link" data-filter="energy">Energy</button>
-          <button class="nav-link" data-filter="immunity">Immunity</button>
-          <button class="nav-link" data-filter="protein">Protein</button>
-          <button class="nav-link" data-filter="superfood">Superfood Bowls</button>
+          <button class="nav-link" data-filter="juice">Daily Juice Menu</button>
+          <button class="nav-link" data-filter="smoothie">Smoothies</button>
+          <button class="nav-link" data-filter="bowl">Superfood Bowls</button>
         </div>
 
         <!-- Menu Grid -->
         <div class="row g-4 justify-content-center" id="menu-items-grid">
           
-          <!-- Item 1: Green Detox (Detox) -->
-          <div class="col-md-6 col-lg-4 menu-item-card" data-category="detox">
-            <div class="glass-card text-start h-100" data-product-name="Green Detox" data-product-price="8.50" data-product-img="assets/images/green_detox.png">
+          <!-- ================= DAILY JUICE MENU ================= -->
+          <!-- Item 1: Green Detox (Juice) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="juice">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Green Detox" data-product-price="8.50" data-product-img="assets/images/green_detox.png">
               <div class="juice-card-img-wrap">
                 <span class="juice-card-badge">Chlorophyll</span>
                 <img src="assets/images/green_detox.png" alt="Green Detox" class="juice-card-img">
               </div>
               <h3 class="fs-4 mb-2 text-brand-primary juice-title">Green Detox</h3>
               <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Spinach, Kale, Celery, Green Apple, Ginger, Lemon</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">120 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">2g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">24g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">0.5g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$8.50</span>
                 <div class="d-flex gap-2">
                   <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Green Detox', '$8.50', 'assets/images/green_detox.png', 'Spinach, Kale, Celery, Green Apple, Ginger, Lemon', 'Low fructose, high chlorophyll cellular alkalizer.', '120kcal', '2g', '24g')">Quick View</button>
@@ -167,54 +244,37 @@
             </div>
           </div>
 
-          <!-- Item 2: Tropical Energy (Energy) -->
-          <div class="col-md-6 col-lg-4 menu-item-card" data-category="energy">
-            <div class="glass-card text-start h-100" data-product-name="Tropical Energy" data-product-price="8.50" data-product-img="assets/images/tropical_energy.png">
-              <div class="juice-card-img-wrap">
-                <span class="juice-card-badge bg-warning text-dark">Vitamin C</span>
-                <img src="assets/images/tropical_energy.png" alt="Tropical Energy" class="juice-card-img">
-              </div>
-              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Tropical Energy</h3>
-              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Mango, Pineapple, Orange, Passion Fruit, Turmeric</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
-                <span class="fs-5 price text-brand-primary font-weight-600">$8.50</span>
-                <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Tropical Energy', '$8.50', 'assets/images/tropical_energy.png', 'Mango, Pineapple, Orange, Passion Fruit, Turmeric', 'Enzymatic bromelain blend to support digestive enzymes and speed recovery.', '160kcal', '1g', '34g')">Quick View</button>
-                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 3: Berry Boost (Energy) -->
-          <div class="col-md-6 col-lg-4 menu-item-card" data-category="energy">
-            <div class="glass-card text-start h-100" data-product-name="Berry Boost" data-product-price="9.00" data-product-img="assets/images/berry_boost.png">
-              <div class="juice-card-img-wrap">
-                <span class="juice-card-badge bg-danger">Antioxidant</span>
-                <img src="assets/images/berry_boost.png" alt="Berry Boost" class="juice-card-img">
-              </div>
-              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Berry Boost</h3>
-              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
-                <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
-                <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Berry Boost', '$9.00', 'assets/images/berry_boost.png', 'Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple', 'Poly-phenols and nitric oxides to restore blood flow dynamics.', '145kcal', '1.5g', '31g')">Quick View</button>
-                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 4: Immunity Blend (Immunity) -->
-          <div class="col-md-6 col-lg-4 menu-item-card" data-category="immunity">
-            <div class="glass-card text-start h-100" data-product-name="Immunity Blend" data-product-price="9.00" data-product-img="assets/images/immunity_blend.png">
+          <!-- Item 2: Immunity Blend (Juice) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="juice">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Immunity Blend" data-product-price="9.00" data-product-img="assets/images/immunity_blend.png">
               <div class="juice-card-img-wrap">
                 <span class="juice-card-badge bg-info text-dark">Alkaline</span>
                 <img src="assets/images/immunity_blend.png" alt="Immunity Blend" class="juice-card-img">
               </div>
               <h3 class="fs-4 mb-2 text-brand-primary juice-title">Immunity Blend</h3>
               <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Ginger, Turmeric, Carrot, Lemon, Black Pepper, Honey</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">110 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">1g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">21g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">0.2g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
                 <div class="d-flex gap-2">
                   <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Immunity Blend', '$9.00', 'assets/images/immunity_blend.png', 'Ginger, Turmeric, Carrot, Lemon, Black Pepper, Honey', 'Active curcuminoids combined with piperine for cellular defense boosts.', '110kcal', '1g', '21g')">Quick View</button>
@@ -224,16 +284,78 @@
             </div>
           </div>
 
-          <!-- Item 5: Almond Fuel (Protein) -->
-          <div class="col-md-6 col-lg-4 menu-item-card" data-category="protein">
-            <div class="glass-card text-start h-100" data-product-name="Almond Fuel" data-product-price="9.50" data-product-img="assets/images/tropical_energy.png">
+          <!-- Item 3: Celery Cleanse (Juice) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="juice">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Celery Cleanse" data-product-price="8.00" data-product-img="assets/images/green_detox.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-success">100% Celery</span>
+                <img src="assets/images/green_detox.png" alt="Celery Cleanse" class="juice-card-img" style="filter: hue-rotate(20deg) saturate(1.2);">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Celery Cleanse</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">100% Organic Celery, Fresh Lemon Juice</p>
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">45 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">1.5g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">9g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">0.1g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$8.00</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Celery Cleanse', '$8.00', 'assets/images/green_detox.png', '100% Organic Celery, Fresh Lemon Juice', 'A high-potassium raw digestif designed to restore fluid balance and reduce digestive swelling.', '45kcal', '1.5g', '9g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= SMOOTHIES ================= -->
+          <!-- Item 4: Almond Fuel (Smoothie) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="smoothie">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Almond Fuel" data-product-price="9.50" data-product-img="assets/images/tropical_energy.png">
               <div class="juice-card-img-wrap">
                 <span class="juice-card-badge bg-success text-white">L-Arginine</span>
                 <img src="assets/images/tropical_energy.png" alt="Almond Fuel" class="juice-card-img" style="filter: hue-rotate(90deg);">
               </div>
               <h3 class="fs-4 mb-2 text-brand-primary juice-title">Almond Fuel</h3>
-              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Activated Almond Milk, Raw Almond Butter, Dates, Vanilla Bean, Cinnamon</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Activated Almond Milk, Raw Almond Butter, Dates, Vanilla, Cinnamon</p>
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">290 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">10g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">18g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">12g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$9.50</span>
                 <div class="d-flex gap-2">
                   <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Almond Fuel', '$9.50', 'assets/images/tropical_energy.png', 'Activated Almond Milk, Raw Almond Butter, Dates, Vanilla Bean, Cinnamon', 'Keto-friendly protein lipids to maintain biological full feeling and repair cells.', '290kcal', '10g', '18g')">Quick View</button>
@@ -243,20 +365,445 @@
             </div>
           </div>
 
-          <!-- Item 6: Acai Berry Bowl (Superfood) -->
-          <div class="col-md-6 col-lg-4 menu-item-card" data-category="superfood">
-            <div class="glass-card text-start h-100" data-product-name="Acai Berry Bowl" data-product-price="12.00" data-product-img="assets/images/berry_boost.png">
+          <!-- Item 5: Berry Boost Smoothie (Smoothie) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="smoothie">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Berry Boost Smoothie" data-product-price="9.00" data-product-img="assets/images/berry_boost.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-danger">Antioxidant</span>
+                <img src="assets/images/berry_boost.png" alt="Berry Boost Smoothie" class="juice-card-img">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Berry Boost Smoothie</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple</p>
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">145 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">1.5g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">31g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">0.5g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Berry Boost Smoothie', '$9.00', 'assets/images/berry_boost.png', 'Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple', 'Poly-phenols and nitric oxides to restore blood flow dynamics.', '145kcal', '1.5g', '31g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Tropical Energy Smoothie (Smoothie) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="smoothie">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Tropical Energy Smoothie" data-product-price="8.50" data-product-img="assets/images/tropical_energy.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-warning text-dark">Vitamin C</span>
+                <img src="assets/images/tropical_energy.png" alt="Tropical Energy Smoothie" class="juice-card-img">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Tropical Energy Smoothie</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Mango, Pineapple, Orange, Passion Fruit, Turmeric</p>
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">160 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">1g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">34g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">0.3g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$8.50</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Tropical Energy Smoothie', '$8.50', 'assets/images/tropical_energy.png', 'Mango, Pineapple, Orange, Passion Fruit, Turmeric', 'Enzymatic bromelain blend to support digestive enzymes and speed recovery.', '160kcal', '1g', '34g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= SUPERFOOD BOWLS ================= -->
+          <!-- Item 7: Acai Berry Bowl (Bowl) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="bowl">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Acai Berry Bowl" data-product-price="12.00" data-product-img="assets/images/berry_boost.png">
               <div class="juice-card-img-wrap">
                 <span class="juice-card-badge bg-dark">Fiber Focus</span>
-                <img src="assets/images/berry_boost.png" alt="Acai Bowl" class="juice-card-img" style="filter: grayscale(0.5) contrast(1.2);">
+                <img src="assets/images/berry_boost.png" alt="Acai Berry Bowl" class="juice-card-img" style="filter: grayscale(0.5) contrast(1.2);">
               </div>
               <h3 class="fs-4 mb-2 text-brand-primary juice-title">Acai Berry Bowl</h3>
-              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Pure Acai Blend, Organic Granola, Banana, Blueberries, Raw Coconut Shavings, Cacao Nibs</p>
-              <div class="d-flex justify-content-between align-items-center mt-auto pt-3 border-top">
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Pure Acai Blend, Organic Granola, Banana, Blueberries, Coconut, Cacao Nibs</p>
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">380 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">6g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">48g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">8g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$12.00</span>
                 <div class="d-flex gap-2">
                   <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Acai Berry Bowl', '$12.00', 'assets/images/berry_boost.png', 'Pure Acai Blend, Organic Granola, Banana, Blueberries, Raw Coconut Shavings, Cacao Nibs', 'Superfood berry paste structured with raw fibers and activated seed crunch.', '380kcal', '6g', '48g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 8: Pitaya Gold Bowl (Bowl) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="bowl">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Pitaya Gold Bowl" data-product-price="12.50" data-product-img="assets/images/berry_boost.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-danger">Iron Rich</span>
+                <img src="assets/images/berry_boost.png" alt="Pitaya Gold Bowl" class="juice-card-img" style="filter: hue-rotate(320deg) saturate(1.8);">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Pitaya Gold Bowl</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Red Dragonfruit, Strawberries, Banana, Hemp Seeds, Honey, House Granola</p>
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">340 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">5g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">44g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">6g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$12.50</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Pitaya Gold Bowl', '$12.50', 'assets/images/berry_boost.png', 'Red Dragonfruit, Strawberries, Banana, Hemp Seeds, Honey, House Granola', 'Enriched with antioxidants and digestive plant-based fibers to promote clean cellular digestion.', '340kcal', '5g', '44g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 9: Spirulina Green Bowl (Bowl) -->
+          <div class="col-md-6 col-lg-4 menu-item-card" data-category="bowl">
+            <div class="glass-card text-start h-100 d-flex flex-column" data-product-name="Spirulina Green Bowl" data-product-price="13.00" data-product-img="assets/images/green_detox.png">
+              <div class="juice-card-img-wrap">
+                <span class="juice-card-badge bg-info text-dark">Algae Protein</span>
+                <img src="assets/images/green_detox.png" alt="Spirulina Green Bowl" class="juice-card-img" style="filter: hue-rotate(60deg) saturate(1.4);">
+              </div>
+              <h3 class="fs-4 mb-2 text-brand-primary juice-title">Spirulina Green Bowl</h3>
+              <p class="text-muted mb-3 ingredients-list" style="font-size: 14px; line-height: 1.4;">Organic Blue Spirulina, Mango, Spinach, Almond Milk, Pumpkin Seeds, Coconut</p>
+              
+              <!-- Nutrition details -->
+              <div class="d-flex gap-2 justify-content-between align-items-center mb-3 bg-light p-2 rounded-3 text-center mt-auto" style="font-size: 12px; background-color: var(--bg-soft) !important; border: 1px solid var(--border-color);">
+                <div>
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Calories</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">310 kcal</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Protein</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">8g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Carbs</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">38g</strong>
+                </div>
+                <div class="border-start ps-2">
+                  <span class="d-block text-muted" style="font-size: 9px; font-weight: 500;">Fat</span>
+                  <strong class="text-brand-primary" style="font-size: 11px;">7g</strong>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-between align-items-center pt-3 border-top">
+                <span class="fs-5 price text-brand-primary font-weight-600">$13.00</span>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Spirulina Green Bowl', '$13.00', 'assets/images/green_detox.png', 'Organic Blue Spirulina, Mango, Spinach, Almond Milk, Pumpkin Seeds, Coconut', 'Highly alkalinizing blue-green algae proteins blended with raw magnesium-rich pumpkin seeds.', '310kcal', '8g', '38g')">Quick View</button>
+                  <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Weekly Organic Specials -->
+    <section class="section-padding bg-soft-section" id="weekly-specials">
+      <div class="container">
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-3 shadow-sm">Weekly Specials</span>
+          <h2 class="h2-title text-brand-primary mb-3">Limited Seasonal Batches</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Fresh ingredients harvested in limited quantities. Available this week only.
+          </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Special 1 -->
+          <div class="col-md-6 col-lg-5 reveal-on-scroll">
+            <div class="glass-card text-start h-100 d-flex flex-row align-items-center gap-4 p-4" data-product-name="Summer Pitaya Hydrator" data-product-price="9.00" data-product-img="assets/images/pitaya_hydrator.png">
+              <img src="assets/images/pitaya_hydrator.png" alt="Summer Pitaya Hydrator" class="img-fluid rounded-3" style="max-height: 140px; object-fit: contain;">
+              <div class="w-100">
+                <span class="badge bg-warning text-dark mb-2">Summer Batch</span>
+                <h3 class="fs-4 mb-1 text-brand-primary juice-title">Summer Pitaya Hydrator</h3>
+                <p class="text-muted mb-2 ingredients-list" style="font-size: 13px; line-height: 1.3;">Fresh Watermelon, Red Dragonfruit, Cucumber, Mint, Lime</p>
+                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                  <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
+                  <button class="btn btn-brand btn-sm px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg me-1"></i> Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Special 2 -->
+          <div class="col-md-6 col-lg-5 reveal-on-scroll" style="transition-delay: 0.15s;">
+            <div class="glass-card text-start h-100 d-flex flex-row align-items-center gap-4 p-4" data-product-name="Golden Charcoal Cleanser" data-product-price="9.50" data-product-img="assets/images/charcoal_elixir.png">
+              <img src="assets/images/charcoal_elixir.png" alt="Golden Charcoal Elixir" class="img-fluid rounded-3" style="max-height: 140px; object-fit: contain;">
+              <div class="w-100">
+                <span class="badge bg-dark text-white mb-2">Active Detox</span>
+                <h3 class="fs-4 mb-1 text-brand-primary juice-title">Golden Charcoal Elixir</h3>
+                <p class="text-muted mb-2 ingredients-list" style="font-size: 13px; line-height: 1.3;">Activated Charcoal, Ginger, Turmeric, Lemon, Cayenne, Agave</p>
+                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                  <span class="fs-5 price text-brand-primary font-weight-600">$9.50</span>
+                  <button class="btn btn-brand btn-sm px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg me-1"></i> Add</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Build Your Elixir Customizer -->
+    <section class="section-padding" id="custom-builder">
+      <div class="container">
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-3 shadow-sm">Interactive Builder</span>
+          <h2 class="h2-title text-brand-primary mb-3">Custom Blend Lab</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Can't find your exact match? Choose your base, active boosters, and sweeteners to formulate a personal cell remedy.
+          </p>
+        </div>
+
+        <div class="row justify-content-center align-items-stretch g-4">
+          <!-- Interactive Selector -->
+          <div class="col-lg-7 reveal-on-scroll">
+            <div class="glass-card h-100 p-4 p-md-5">
+              <!-- Select Base -->
+              <div class="mb-4">
+                <h5 class="text-brand-primary mb-3 font-weight-600"><span class="badge bg-success text-white rounded-circle me-2" style="padding: 5px 8px;">1</span> Choose Your Liquid Base</h5>
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <input type="radio" class="btn-check" name="custom-base" id="base-celery" value="celery" checked onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3" for="base-celery">
+                      <strong class="d-block text-brand-primary">Alkalizing Celery</strong>
+                      <span class="small text-muted text-wrap">Pure celery, organic hydration</span>
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="radio" class="btn-check" name="custom-base" id="base-greens" value="greens" onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3" for="base-greens">
+                      <strong class="d-block text-brand-primary">Deep Greens</strong>
+                      <span class="small text-muted text-wrap">Spinach, kale, romaine base</span>
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="radio" class="btn-check" name="custom-base" id="base-citrus" value="citrus" onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3" for="base-citrus">
+                      <strong class="d-block text-brand-primary">Citrus Orange</strong>
+                      <span class="small text-muted text-wrap">Vitamin C rich orange & grapefruit</span>
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="radio" class="btn-check" name="custom-base" id="base-coconut" value="coconut" onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3" for="base-coconut">
+                      <strong class="d-block text-brand-primary">Creamy Coconut</strong>
+                      <span class="small text-muted text-wrap">Raw young coconut water base</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Select Boosters -->
+              <div class="mb-4">
+                <h5 class="text-brand-primary mb-3 font-weight-600"><span class="badge bg-success text-white rounded-circle me-2" style="padding: 5px 8px;">2</span> Add Active Boosters (+$0.75 each)</h5>
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <input type="checkbox" class="btn-check" name="custom-booster" id="booster-ginger" value="ginger" onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3 text-brand-primary" for="booster-ginger">
+                      <strong>Ginger Shot</strong>
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="checkbox" class="btn-check" name="custom-booster" id="booster-turmeric" value="turmeric" onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3 text-brand-primary" for="booster-turmeric">
+                      <strong>Turmeric Extract</strong>
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="checkbox" class="btn-check" name="custom-booster" id="booster-spirulina" value="spirulina" onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3 text-brand-primary" for="booster-spirulina">
+                      <strong>Blue Spirulina</strong>
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="checkbox" class="btn-check" name="custom-booster" id="booster-chia" value="chia" onchange="updateCustomizer()">
+                    <label class="btn btn-brand-outline w-100 text-start py-3 px-3 text-brand-primary" for="booster-chia">
+                      <strong>Hydrated Chia Seeds</strong>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Select Sweetener -->
+              <div>
+                <h5 class="text-brand-primary mb-3 font-weight-600"><span class="badge bg-success text-white rounded-circle me-2" style="padding: 5px 8px;">3</span> Choose Sweetness Level</h5>
+                <div class="d-flex flex-wrap gap-2">
+                  <input type="radio" class="btn-check" name="custom-sweetener" id="sweet-none" value="none" checked onchange="updateCustomizer()">
+                  <label class="btn btn-brand-outline flex-fill text-center py-2.5 text-brand-primary" for="sweet-none">Unsweetened</label>
+                  
+                  <input type="radio" class="btn-check" name="custom-sweetener" id="sweet-honey" value="honey" onchange="updateCustomizer()">
+                  <label class="btn btn-brand-outline flex-fill text-center py-2.5 text-brand-primary" for="sweet-honey">Wild Honey</label>
+                  
+                  <input type="radio" class="btn-check" name="custom-sweetener" id="sweet-agave" value="agave" onchange="updateCustomizer()">
+                  <label class="btn btn-brand-outline flex-fill text-center py-2.5 text-brand-primary" for="sweet-agave">Blue Agave</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Output Card -->
+          <div class="col-lg-5 reveal-on-scroll" style="transition-delay: 0.15s;">
+            <div class="glass-card h-100 p-4 p-md-5 d-flex flex-column text-center text-white position-relative overflow-hidden" id="custom-output-box" style="background-image: linear-gradient(rgba(15, 25, 18, 0.88), rgba(15, 25, 18, 0.88)), url('assets/images/cleanse_cta_bg.png'); background-size: cover; background-position: center; border-color: var(--color-primary);" data-product-name="Custom Elixir" data-product-price="8.50" data-product-img="assets/images/green_detox.png">
+              <div class="my-auto">
+                <i class="bi bi-bezier2 text-success display-3 mb-4 d-block"></i>
+                <h4 class="text-white-50 uppercase tracking-wider small mb-2">Your Formulation</h4>
+                <h3 class="fs-2 text-white mb-4" id="custom-blend-name">Custom Celery Cleanse</h3>
+                
+                <div class="row g-2 justify-content-center mb-5">
+                  <div class="col-6 col-sm-4 border-end border-white-10">
+                    <span class="d-block text-white-50 small mb-1">Calories</span>
+                    <strong class="text-white fs-5" id="custom-calories">60 kcal</strong>
+                  </div>
+                  <div class="col-6 col-sm-4">
+                    <span class="d-block text-white-50 small mb-1">Base Target</span>
+                    <strong class="text-white fs-5">Hydration</strong>
+                  </div>
+                </div>
+                
+                <div class="border-top border-white-10 pt-4 mt-2">
+                  <span class="text-white-50 small d-block mb-1">Estimated Cost:</span>
+                  <h3 class="text-white fs-1 mb-4" id="custom-price">$8.50</h3>
+                  
+                  <button class="btn btn-brand w-100 py-3 add-to-cart-btn" onclick="addCustomToCart(event)">
+                    <i class="bi bi-cart-plus me-2"></i> Add Custom Formulation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: FAQs -->
+    <section class="section-padding bg-soft-section" id="menu-faq">
+      <div class="container" style="max-width: 800px;">
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-3 shadow-sm">FAQ</span>
+          <h2 class="h2-title text-brand-primary mb-3">Juice Science Questions</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Everything you need to know about our active enzyme preservation, packaging, and shelf life.
+          </p>
+        </div>
+
+        <div class="accordion accordion-custom" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="glass-card mb-3 reveal-on-scroll p-0">
+            <div class="accordion-item border-0 bg-transparent">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent font-weight-600 py-4 px-4 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse1" aria-expanded="false" aria-controls="faq-collapse1">
+                  How long do raw juices last?
+                </button>
+              </h2>
+              <div id="faq-collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted pt-0 px-4 pb-4 small">
+                  Because our juices are 100% raw and never pasteurized or heat-treated, they must be stored in the refrigerator immediately. They maintain full enzyme potency for up to 4 days from pressing and should be consumed within that window.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="glass-card mb-3 reveal-on-scroll p-0" style="transition-delay: 0.1s;">
+            <div class="accordion-item border-0 bg-transparent">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent font-weight-600 py-4 px-4 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse2" aria-expanded="false" aria-controls="faq-collapse2">
+                  Why do you use glass bottles instead of plastic?
+                </button>
+              </h2>
+              <div id="faq-collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted pt-0 px-4 pb-4 small">
+                  Glass is inert and does not leach microplastics or chemicals into the raw juice, preserving the pure taste and vitamin structure. Additionally, we run a bottle return loop to wash, sanitize, and reuse our medical-grade bottles, reducing environmental impact.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="glass-card mb-3 reveal-on-scroll p-0" style="transition-delay: 0.2s;">
+            <div class="accordion-item border-0 bg-transparent">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed bg-transparent font-weight-600 py-4 px-4 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse3" aria-expanded="false" aria-controls="faq-collapse3">
+                  Are your items 100% organic?
+                </button>
+              </h2>
+              <div id="faq-collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-muted pt-0 px-4 pb-4 small">
+                  Yes, absolutely. We source all vegetables, roots, greens, and fruits from local farmers who hold USDA Organic certifications. We never add water, sweeteners, syrups, or chemical preservatives to our juices.
                 </div>
               </div>
             </div>
@@ -315,10 +862,13 @@
   <footer class="footer-custom">
     <div class="container">
       <div class="row g-5">
+        <!-- Logo & Brand statement -->
         <div class="col-lg-4 col-md-6">
-          <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2 mb-4" href="index.html">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+          <a class="navbar-brand navbar-brand-custom mb-4" href="index.html">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+              <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+              <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <span>Verde & Vita</span>
           </a>
@@ -328,11 +878,11 @@
           <div class="d-flex gap-3 fs-5">
             <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
+        <!-- Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -344,6 +894,7 @@
           </ul>
         </div>
 
+        <!-- Resources -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -355,6 +906,7 @@
           </ul>
         </div>
 
+        <!-- Contact details -->
         <div class="col-lg-4 col-md-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
           <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>
@@ -396,6 +948,78 @@
       document.getElementById('qv-protein').textContent = protein;
       document.getElementById('qv-carbs').textContent = carbs;
     }
+
+    // Customizer Interactive Logic
+    function updateCustomizer() {
+      const baseRadio = document.querySelector('input[name="custom-base"]:checked');
+      const baseLabel = document.querySelector(`label[for="${baseRadio.id}"] strong`).textContent;
+      
+      const sweetnessRadio = document.querySelector('input[name="custom-sweetener"]:checked');
+      const sweetness = sweetnessRadio.value;
+      
+      // Collect boosters
+      const boosterEls = document.querySelectorAll('input[name="custom-booster"]:checked');
+      const boosters = [];
+      boosterEls.forEach(el => {
+        const label = document.querySelector(`label[for="${el.id}"] strong`).textContent;
+        boosters.push(label);
+      });
+      
+      // Calculate price and calories
+      let price = 8.50 + (boosterEls.length * 0.75);
+      let cals = 60 + (boosterEls.length * 15);
+      if (sweetness === 'honey' || sweetness === 'agave') cals += 45;
+      
+      // Update displays
+      document.getElementById('custom-price').textContent = `$${price.toFixed(2)}`;
+      document.getElementById('custom-calories').textContent = `${cals} kcal`;
+      
+      // Update text name and attributes on live card
+      const baseShortName = baseRadio.value;
+      let name = "Custom " + baseShortName.charAt(0).toUpperCase() + baseShortName.slice(1) + " Elixir";
+      if (boosters.length > 0) {
+        name = "Custom " + baseShortName.charAt(0).toUpperCase() + baseShortName.slice(1) + " (+" + boosterEls.length + " Boost)";
+      }
+      document.getElementById('custom-blend-name').textContent = name;
+      
+      const outputBox = document.getElementById('custom-output-box');
+      outputBox.setAttribute('data-product-name', name);
+      outputBox.setAttribute('data-product-price', price.toFixed(2));
+      
+      // Build details list for cart
+      const ingredients = baseLabel + (boosters.length > 0 ? ", " + boosters.join(", ") : "") + (sweetness !== 'none' ? `, Sweetened with ${sweetness}` : "");
+      outputBox.setAttribute('data-product-ingredients', ingredients);
+    }
+
+    function addCustomToCart(e) {
+      e.preventDefault();
+      const outputBox = document.getElementById('custom-output-box');
+      const name = outputBox.getAttribute('data-product-name');
+      const price = parseFloat(outputBox.getAttribute('data-product-price'));
+      const image = outputBox.getAttribute('data-product-img');
+      const ingredients = outputBox.getAttribute('data-product-ingredients') || "Custom Blend Ingredients";
+      
+      // Trigger cart add logic
+      if (typeof addToCart === 'function') {
+        addToCart({ name, price, image, ingredients });
+        
+        // Open Cart Drawer
+        const cartDrawer = document.getElementById('cart-drawer');
+        const backdrop = document.querySelector('.offcanvas-backdrop-custom');
+        if (cartDrawer) {
+          cartDrawer.classList.add('open');
+          if (backdrop) backdrop.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+    }
+    
+    // Initialize customizer values on load
+    document.addEventListener('DOMContentLoaded', () => {
+      if (document.getElementById('custom-price')) {
+        updateCustomizer();
+      }
+    });
   </script>
 </body>
 </html>

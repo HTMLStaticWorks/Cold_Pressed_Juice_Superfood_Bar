@@ -49,12 +49,6 @@
     <priority>0.60</priority>
   </url>
   <url>
-    <loc>https://verdevita.com/gallery.html</loc>
-    <lastmod>2026-06-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.50</priority>
-  </url>
-  <url>
     <loc>https://verdevita.com/contact.html</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>

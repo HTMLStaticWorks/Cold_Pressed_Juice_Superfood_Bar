@@ -8,7 +8,7 @@
   <title>Verde & Vita | Our Wellness Services</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Bootstrap 5 CSS CDN -->
   <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -17,6 +17,30 @@
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    /* Interactive Advisor Styles */
+    .advisor-goal-btn {
+      border-color: rgba(255, 255, 255, 0.25) !important;
+      color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(4px);
+      transition: var(--transition-bounce) !important;
+    }
+    .advisor-goal-btn:hover {
+      background: rgba(255, 255, 255, 0.15) !important;
+      border-color: #ffffff !important;
+      transform: translateY(-2px);
+    }
+    .advisor-goal-btn.active {
+      background-color: var(--color-primary) !important;
+      border-color: var(--color-primary) !important;
+      color: var(--bg-main) !important;
+      box-shadow: 0 8px 24px rgba(37, 95, 59, 0.35);
+    }
+    #rec-juice-img {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  </style>
 </head>
 <body>
 
@@ -25,71 +49,95 @@
 
   <!-- Header Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container">
-        <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="index.html">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
-          </svg>
-          <span>Verde & Vita</span>
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+   <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand navbar-brand-custom" href="index.html">
+     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+      <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+      <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
+     </svg>
+     <span>Verde & Vita</span>
+    </a>
 
-        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
-          <ul class="navbar-nav gap-2">
-            <li class="nav-item dropdown">
-              <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-              <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
-                <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1: Parallax Split</a></li>
-                <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2: Product Story</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom active" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+     <ul class="navbar-nav gap-2">
+      <li class="nav-item dropdown">
+       <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a>
+       <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+        <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+        <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+       </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom active" href="services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+     </ul>
+    </div>
 
-        <div class="d-flex align-items-center gap-2">
-          <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
-          <button class="btn btn-sm btn-brand-outline py-1 px-3 d-none d-sm-inline-block rtl-toggle-btn">RTL</button>
-          <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
-            <i class="bi bi-bag"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
-          </button>
-          <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login"><i class="bi bi-person"></i></a>
-          <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <!-- Header Actions -->
+    <div class="d-flex align-items-center gap-2">
+     <!-- Light/Dark Toggle -->
+     <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme">
+      <i class="bi bi-moon-stars"></i>
+     </button>
+     
+     <!-- RTL Toggle -->
+     <button class="toggle-icon-btn rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
+
+     <!-- Shopping Cart Toggle -->
+     <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+      <i class="bi bi-bag"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+     </button>
+
+     <!-- Profile Link -->
+     <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login">
+      <i class="bi bi-person"></i>
+     </a>
+
+     <!-- Hamburger Button (Mobile Only) -->
+     <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+     </button>
+    </div>
+   </div>
+  </nav>
+ </header>
 
   <!-- Mobile Offcanvas Menu -->
   <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
-    <div class="d-flex flex-column h-100 justify-content-between">
-      <ul class="navbar-nav gap-3 fs-3">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Cleanse Programs</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Brand</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="border-top pt-4">
-        <button class="toggle-icon-btn theme-toggle-btn mb-3"><i class="bi bi-moon-stars"></i></button>
-        <button class="btn btn-sm btn-brand-outline rtl-toggle-btn px-4 w-100 mb-3">RTL</button>
-        <a href="login.html" class="btn btn-brand w-100 py-3"><i class="bi bi-person me-2"></i>Sign In</a>
+    <!-- Close Button -->
+    <button class="btn-close position-absolute top-0 end-0 m-4" aria-label="Close Menu" onclick="document.querySelector('.hamburger-custom').click();" style="font-size: 18px; z-index: 10;"></button>
+  <div class="d-flex flex-column h-100 justify-content-between">
+   <ul class="navbar-nav gap-3 fs-3">
+    <li class="nav-item dropdown">
+     <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Home</span> <i class="bi bi-chevron-down" style="font-size: 14px;"></i></a>
+     <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+      <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+      <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+     </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom active" href="services.html">Services</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
+   </ul>
+   <div class="border-top pt-4">
+
+        <a href="login.html" class="btn btn-brand w-100 mt-4 py-3"><i class="bi bi-person me-2"></i>Sign In / Join</a>
       </div>
-    </div>
   </div>
+ </div>
 
   <!-- Cart Drawer -->
   <div class="cart-drawer-custom" id="cart-drawer">
@@ -112,11 +160,11 @@
 
   <main style="padding-top: 100px;">
     <!-- Page Header -->
-    <section class="section-padding text-center" style="background-color: var(--bg-soft);">
-      <div class="container">
+    <section class="section-padding text-center position-relative" style="background-image: linear-gradient(rgba(15, 25, 18, 0.68), rgba(15, 25, 18, 0.68)), url('assets/images/services_hero_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 140px; padding-bottom: 140px;">
+      <div class="container position-relative" style="z-index: 2;">
         <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Tailored Nutrition</span>
-        <h1 class="font-display-large text-brand-primary mb-3">Wellness Offerings</h1>
-        <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
+        <h1 class="font-display-large text-white mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Wellness Offerings</h1>
+        <p class="text-white fs-5 mx-auto" style="max-width: 600px; opacity: 0.9; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">
           Explore our range of premium organic services, from home deliveries to customized corporate wellness planning.
         </p>
       </div>
@@ -129,11 +177,11 @@
           <!-- Service 1: Cold Pressed Subscriptions -->
           <div class="col-lg-4 col-md-6 reveal-on-scroll">
             <div class="glass-card h-100 text-start d-flex flex-column">
-              <div class="text-brand-primary fs-2 mb-3"><i class="bi bi-calendar3"></i></div>
+              <div class="text-brand-primary fs-2 mb-3 d-flex align-items-center justify-content-center"><i class="bi bi-calendar3"></i></div>
               <h3 class="fs-4 text-brand-primary mb-2">Daily Juice Subscriptions</h3>
               <p class="text-muted small mb-4">Set up a recurring morning dropship of custom elixirs. Choose your delivery days, select flavors, and modify selections anytime via your dashboard.</p>
               <div class="mt-auto border-top pt-3">
-                <a href="menu.html" class="btn btn-brand-outline w-100 text-center py-2">Set Up Subscription</a>
+                <a href="menu.html" class="btn btn-brand w-100 text-center py-2">Set Up Subscription</a>
               </div>
             </div>
           </div>
@@ -141,7 +189,7 @@
           <!-- Service 2: Detox Cleanse Programs -->
           <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.1s;">
             <div class="glass-card h-100 text-start d-flex flex-column">
-              <div class="text-brand-primary fs-2 mb-3"><i class="bi bi-heart-pulse"></i></div>
+              <div class="text-brand-primary fs-2 mb-3 d-flex align-items-center justify-content-center"><i class="bi bi-heart-pulse"></i></div>
               <h3 class="fs-4 text-brand-primary mb-2">Guided Cleanse Programs</h3>
               <p class="text-muted small mb-4">A complete cellular reset with nutritionist support. Packages are prepared fresh and shipped chilled. Includes detailed hour-by-hour consumption schedules.</p>
               <div class="mt-auto border-top pt-3">
@@ -153,11 +201,11 @@
           <!-- Service 3: Corporate Bar Catering -->
           <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.2s;">
             <div class="glass-card h-100 text-start d-flex flex-column">
-              <div class="text-brand-primary fs-2 mb-3"><i class="bi bi-building"></i></div>
+              <div class="text-brand-primary fs-2 mb-3 d-flex align-items-center justify-content-center"><i class="bi bi-building"></i></div>
               <h3 class="fs-4 text-brand-primary mb-2">Corporate Wellness Planning</h3>
               <p class="text-muted small mb-4">Elevate team health and workplace productivity. We set up aesthetic juice bars, deliver weekly wellness shots, and cater to corporate seminars.</p>
               <div class="mt-auto border-top pt-3">
-                <a href="contact.html" class="btn btn-brand-outline w-100 text-center py-2">Contact Sales</a>
+                <a href="contact.html" class="btn btn-brand w-100 text-center py-2">Contact Sales</a>
               </div>
             </div>
           </div>
@@ -165,11 +213,11 @@
           <!-- Service 4: Superfood Bowl Catering -->
           <div class="col-lg-4 col-md-6 reveal-on-scroll">
             <div class="glass-card h-100 text-start d-flex flex-column">
-              <div class="text-brand-primary fs-2 mb-3"><i class="bi bi-flower3"></i></div>
+              <div class="text-brand-primary fs-2 mb-3 d-flex align-items-center justify-content-center"><i class="bi bi-flower3"></i></div>
               <h3 class="fs-4 text-brand-primary mb-2">Wellness Bar Catering</h3>
               <p class="text-muted small mb-4">Bring organic luxury to private functions, studios, or gatherings. Fresh pop-up bowl stations with organic fruits, activated seeds, and house spreads.</p>
               <div class="mt-auto border-top pt-3">
-                <a href="contact.html" class="btn btn-brand-outline w-100 text-center py-2">Inquire Now</a>
+                <a href="contact.html" class="btn btn-brand w-100 text-center py-2">Inquire Now</a>
               </div>
             </div>
           </div>
@@ -177,11 +225,11 @@
           <!-- Service 5: Custom Wellness Packs -->
           <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.1s;">
             <div class="glass-card h-100 text-start d-flex flex-column">
-              <div class="text-brand-primary fs-2 mb-3"><i class="bi bi-box-seam"></i></div>
+              <div class="text-brand-primary fs-2 mb-3 d-flex align-items-center justify-content-center"><i class="bi bi-box-seam"></i></div>
               <h3 class="fs-4 text-brand-primary mb-2">Customized Elixir Cases</h3>
               <p class="text-muted small mb-4">Design your own case of 12 or 24 bottles. Hand-pick your targets (e.g. skin focus, deep detox, ginger boosts) to match your personal nutritional goals.</p>
               <div class="mt-auto border-top pt-3">
-                <a href="menu.html" class="btn btn-brand-outline w-100 text-center py-2">Customize Pack</a>
+                <a href="menu.html" class="btn btn-brand w-100 text-center py-2">Customize Pack</a>
               </div>
             </div>
           </div>
@@ -189,13 +237,250 @@
           <!-- Service 6: 1-on-1 Consultations -->
           <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.2s;">
             <div class="glass-card h-100 text-start d-flex flex-column">
-              <div class="text-brand-primary fs-2 mb-3"><i class="bi bi-person-hearts"></i></div>
+              <div class="text-brand-primary fs-2 mb-3 d-flex align-items-center justify-content-center"><i class="bi bi-person-hearts"></i></div>
               <h3 class="fs-4 text-brand-primary mb-2">Nutrition Consultations</h3>
               <p class="text-muted small mb-4">Schedule a personal session with our certified wellness nutritionists. Receive metabolic profiling and customized dietary plans.</p>
               <div class="mt-auto border-top pt-3">
-                <a href="contact.html" class="btn btn-brand-outline w-100 text-center py-2">Book Consultation</a>
+                <a href="contact.html" class="btn btn-brand w-100 text-center py-2">Book Consultation</a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: The Freshness Cycle (How It Works) -->
+    <section class="section-padding bg-soft-section" id="freshness-cycle">
+      <div class="container">
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-3 shadow-sm">The Process</span>
+          <h2 class="h2-title text-brand-primary mb-3">Our 24-Hour Freshness Loop</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            From organic farm to your doorstep in less than 24 hours. We keep it cold, raw, and active.
+          </p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+          <!-- Step 1 -->
+          <div class="col-lg-4 col-md-6 reveal-on-scroll">
+            <div class="glass-card h-100 text-start d-flex flex-column p-4">
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <span class="font-display-large text-brand-primary opacity-25 fw-bold" style="font-size: 3rem; line-height: 1;">01</span>
+                <div class="text-brand-primary fs-3 p-3 bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="bi bi-sliders2"></i>
+                </div>
+              </div>
+              <h4 class="fs-4 text-brand-primary mb-2 fw-semibold">Customize Your Plan</h4>
+              <p class="text-muted small mb-0">
+                Select your wellness targets, flavor preferences, and delivery days. Modify or pause your schedule anytime with a single click in your account portal.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.1s;">
+            <div class="glass-card h-100 text-start d-flex flex-column p-4">
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <span class="font-display-large text-brand-primary opacity-25 fw-bold" style="font-size: 3rem; line-height: 1;">02</span>
+                <div class="text-brand-primary fs-3 p-3 bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="bi bi-snow"></i>
+                </div>
+              </div>
+              <h4 class="fs-4 text-brand-primary mb-2 fw-semibold">Pressed at 4:00 AM</h4>
+              <p class="text-muted small mb-0">
+                Our custom slow-press hydraulic extractors squeeze organic greens under high pressure without heat. This prevents oxidation and locks in 100% active enzymes.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="col-lg-4 col-md-6 reveal-on-scroll" style="transition-delay: 0.2s;">
+            <div class="glass-card h-100 text-start d-flex flex-column p-4">
+              <div class="d-flex align-items-center justify-content-between mb-4">
+                <span class="font-display-large text-brand-primary opacity-25 fw-bold" style="font-size: 3rem; line-height: 1;">03</span>
+                <div class="text-brand-primary fs-3 p-3 bg-white rounded-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                  <i class="bi bi-send-check"></i>
+                </div>
+              </div>
+              <h4 class="fs-4 text-brand-primary mb-2 fw-semibold">Chilled Morning Drop</h4>
+              <p class="text-muted small mb-0">
+                Juices are packed into temperature-controlled reusable glass boxes and dropped at your doorstep by 7:00 AM. Return empty bottles on your next delivery for a circular loop.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: The Raw Truth Comparison -->
+    <section class="section-padding" id="raw-truth">
+      <div class="container">
+        <div class="text-center mb-5 reveal-on-scroll">
+          <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-3 shadow-sm">Nutrition Comparison</span>
+          <h2 class="h2-title text-brand-primary mb-3">The Raw Truth</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">
+            Not all juices are created equal. Here is how our slow-press process compares to supermarket alternatives.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Supermarket Juice Card -->
+          <div class="col-md-6 reveal-on-scroll">
+            <div class="glass-card h-100 p-5 d-flex flex-column" style="opacity: 0.75; border-color: var(--border-color);">
+              <h3 class="fs-3 text-muted mb-4 d-flex align-items-center justify-content-between">
+                <span>Standard Pasteurization</span>
+                <i class="bi bi-x-circle text-danger"></i>
+              </h3>
+              
+              <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-dash-circle text-danger mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">Heat Treated (Pasteurized)</strong>
+                    <span class="text-muted small">Heated up to 160°F to extend shelf life. This heat destroys sensitive raw enzymes and vitamins.</span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-dash-circle text-danger mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">Preservatives & Concentrates</strong>
+                    <span class="text-muted small">Often reconstituted from concentrate with artificial colors, added water, sugars, and preservatives.</span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-dash-circle text-danger mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">Plastic Bottles</strong>
+                    <span class="text-muted small">Bottled in single-use plastics that leach microplastics and chemical flavor components over time.</span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-dash-circle text-danger mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">Weeks on Shelves</strong>
+                    <span class="text-muted small">Juices sit in retail warehouses and shelves for up to 6 months before purchase.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Verde & Vita Cold-Pressed Card -->
+          <div class="col-md-6 reveal-on-scroll" style="transition-delay: 0.15s;">
+            <div class="glass-card h-100 p-5 d-flex flex-column position-relative shadow" style="border: 2px solid var(--color-primary); background-color: var(--bg-soft);">
+              <div class="position-absolute top-0 end-0 bg-success text-white px-3 py-1" style="border-radius: 0 0 0 var(--border-radius-sm); font-size: 12px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase;">
+                Premium Raw Choice
+              </div>
+              
+              <h3 class="fs-3 text-brand-primary mb-4 d-flex align-items-center justify-content-between">
+                <span>Verde & Vita Cold-Pressed</span>
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </h3>
+              
+              <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-check-circle text-success mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">Zero-Heat Hydraulic Slow-Press</strong>
+                    <span class="text-muted small">Squeezed gently under 15 tons of pressure. Zero friction, zero heat. 100% of vitamins, minerals, and bio-active enzymes remain intact.</span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-check-circle text-success mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">100% Pure Organic Ingredients</strong>
+                    <span class="text-muted small">Zero water, sugar, or chemicals. Each bottle contains up to 3 lbs of raw organic green vegetables, roots, and citrus fruits.</span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-check-circle text-success mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">Eco-Friendly Reusable Glass</strong>
+                    <span class="text-muted small">Bottled in premium medical-grade glass to preserve pure flavor integrity. Sterilized and recycled in our circular loop program.</span>
+                  </div>
+                </li>
+                <li class="d-flex align-items-start gap-3">
+                  <i class="bi bi-check-circle text-success mt-1"></i>
+                  <div>
+                    <strong class="text-brand-primary d-block mb-1">Pressed and Shipped Daily</strong>
+                    <span class="text-muted small">Never stored. Pressed at dawn, hand-packed, and shipped directly to your cooler. Best consumed raw within 4 days.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Find Your Match (Interactive Wellness Quiz & CTA) -->
+    <section class="section-padding position-relative text-center overflow-hidden" id="wellness-advisor" style="background-image: linear-gradient(rgba(15, 25, 18, 0.75), rgba(15, 25, 18, 0.75)), url('assets/images/cleanse_cta_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 600px; display: flex; align-items: center;">
+      <!-- Floating accent lights -->
+      <div class="position-absolute top-0 start-50 translate-middle-x bg-success opacity-10 rounded-circle" style="width: 500px; height: 500px; filter: blur(120px); pointer-events: none;"></div>
+      
+      <div class="container position-relative" style="z-index: 2;">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 reveal-on-scroll">
+            <span class="badge text-white border border-secondary bg-transparent px-3 py-2 rounded-pill mb-4 shadow-sm">Interactive Advisor</span>
+            <h2 class="h2-title text-white mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Find Your Wellness Match</h2>
+            <p class="text-white mx-auto fs-5 mb-5" style="max-width: 600px; opacity: 0.9; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">
+              Select your primary health goal below, and our virtual nutritionist will instantly curate the ideal blend for your body.
+            </p>
+            
+            <!-- Goal Selector Buttons -->
+            <div class="d-flex flex-wrap gap-2 justify-content-center mb-5">
+              <button class="btn btn-brand-outline text-white border-white-50 px-4 py-3 advisor-goal-btn active" data-goal="detox" onclick="selectAdvisorGoal(this, 'detox')">
+                <i class="bi bi-virus me-2"></i> Cellular Detox
+              </button>
+              <button class="btn btn-brand-outline text-white border-white-50 px-4 py-3 advisor-goal-btn" data-goal="energy" onclick="selectAdvisorGoal(this, 'energy')">
+                <i class="bi bi-lightning-charge me-2"></i> Peak Energy
+              </button>
+              <button class="btn btn-brand-outline text-white border-white-50 px-4 py-3 advisor-goal-btn" data-goal="immunity" onclick="selectAdvisorGoal(this, 'immunity')">
+                <i class="bi bi-shield-plus me-2"></i> High Immunity
+              </button>
+              <button class="btn btn-brand-outline text-white border-white-50 px-4 py-3 advisor-goal-btn" data-goal="glow" onclick="selectAdvisorGoal(this, 'glow')">
+                <i class="bi bi-sparkles me-2"></i> Skin Radiance
+              </button>
+            </div>
+            
+            <!-- Dynamic Recommendation Box -->
+            <div class="glass-card text-start p-4 p-md-5 mx-auto text-white" style="max-width: 680px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border-color: rgba(255,255,255,0.15); box-shadow: 0 20px 50px rgba(0,0,0,0.25);">
+              <div id="advisor-rec-container" class="row align-items-center g-4">
+                <!-- Image column -->
+                <div class="col-md-4 text-center">
+                  <div class="position-relative d-inline-block">
+                    <div class="position-absolute top-50 start-50 translate-middle bg-success opacity-20 rounded-circle" style="width: 130px; height: 130px; filter: blur(20px);"></div>
+                    <img id="rec-juice-img" src="assets/images/green_detox.png" alt="Recommended Juice" class="img-fluid position-relative" style="max-height: 180px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));">
+                  </div>
+                </div>
+                <!-- Content column -->
+                <div class="col-md-8">
+                  <span class="text-success text-uppercase fw-bold tracking-wider small d-block mb-1" id="rec-juice-subtitle">Purify & Reset</span>
+                  <h3 class="fs-3 text-white mb-2" id="rec-juice-title">Green Detox Elixir</h3>
+                  <p class="small text-white-50 mb-3" id="rec-juice-desc">
+                    Deep cellular purification designed to purge heavy metals, boost alkalinity, and reset digestive performance. Zero sweet fruit juices added.
+                  </p>
+                  
+                  <div class="mb-4 border-top border-white-10 pt-3">
+                    <span class="d-block text-white-50 small mb-1 fw-medium">Active Superfoods:</span>
+                    <div class="d-flex flex-wrap gap-2" id="rec-juice-tags">
+                      <span class="badge bg-white bg-opacity-10 text-white border border-white border-opacity-10 rounded-pill px-3 py-1.5">Organic Celery</span>
+                      <span class="badge bg-white bg-opacity-10 text-white border border-white border-opacity-10 rounded-pill px-3 py-1.5">Fresh Ginger</span>
+                      <span class="badge bg-white bg-opacity-10 text-white border border-white border-opacity-10 rounded-pill px-3 py-1.5">Alkalizing Lime</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center justify-content-between gap-3 pt-2">
+                    <div>
+                      <span class="text-white-50 small d-block">Retail Price:</span>
+                      <span class="fs-4 fw-bold text-white" id="rec-juice-price">$8.50</span>
+                    </div>
+                    <a href="menu.html" class="btn btn-brand py-2.5 px-4" id="rec-juice-link">Explore & Shop</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
@@ -206,10 +491,13 @@
   <footer class="footer-custom">
     <div class="container">
       <div class="row g-5">
+        <!-- Logo & Brand statement -->
         <div class="col-lg-4 col-md-6">
-          <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2 mb-4" href="index.html">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+          <a class="navbar-brand navbar-brand-custom mb-4" href="index.html">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+              <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+              <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <span>Verde & Vita</span>
           </a>
@@ -219,11 +507,11 @@
           <div class="d-flex gap-3 fs-5">
             <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
+        <!-- Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -235,6 +523,7 @@
           </ul>
         </div>
 
+        <!-- Resources -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -246,6 +535,7 @@
           </ul>
         </div>
 
+        <!-- Contact details -->
         <div class="col-lg-4 col-md-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
           <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>
@@ -274,5 +564,87 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/animations.js"></script>
+  <script>
+    const advisorGoals = {
+      detox: {
+        title: "Green Detox Elixir",
+        subtitle: "Purify & Reset",
+        desc: "Deep cellular purification designed to purge heavy metals, boost alkalinity, and reset digestive performance. Squeezed daily with raw kale, celery, cucumber, lemon, and ginger.",
+        img: "assets/images/green_detox.png",
+        price: "$8.50",
+        tags: ["Organic Celery", "Fresh Ginger", "Alkalizing Lime", "Spinach"]
+      },
+      energy: {
+        title: "Tropical Energy Blend",
+        subtitle: "Focus & Stamina",
+        desc: "Natural high-octane focus boost. Filled with raw vitamins and enzymes to power your morning workouts and creative productivity sessions without the crash.",
+        img: "assets/images/tropical_energy.png",
+        price: "$8.50",
+        tags: ["Raw Pineapple", "Fresh Mint", "Cucumber", "Chia Seeds"]
+      },
+      immunity: {
+        title: "Immunity Boost",
+        subtitle: "Defense & Recovery",
+        desc: "An organic barrier shield for active bodies. Deep warming roots help stimulate immune cell function and lower full-body inflammatory indicators.",
+        img: "assets/images/immunity_blend.png",
+        price: "$9.00",
+        tags: ["Turmeric Root", "Fresh Ginger", "Carrot", "Orange Juice"]
+      },
+      glow: {
+        title: "Berry Antioxidant Shield",
+        subtitle: "Collagen & Hydration",
+        desc: "Cellular hydration for radiant skin. Packed with dark organic berries that neutralize free radicals and promote organic collagen growth.",
+        img: "assets/images/berry_boost.png",
+        price: "$9.00",
+        tags: ["Acai Berry", "Blueberries", "Alkaline Water", "Camu Camu"]
+      }
+    };
+
+    function selectAdvisorGoal(buttonElement, goalKey) {
+      // Update active button state
+      document.querySelectorAll('.advisor-goal-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      buttonElement.classList.add('active');
+
+      // Get recommendation details
+      const rec = advisorGoals[goalKey];
+      if (!rec) return;
+
+      // Select DOM nodes
+      const imgEl = document.getElementById('rec-juice-img');
+      const titleEl = document.getElementById('rec-juice-title');
+      const subtitleEl = document.getElementById('rec-juice-subtitle');
+      const descEl = document.getElementById('rec-juice-desc');
+      const tagsEl = document.getElementById('rec-juice-tags');
+      const priceEl = document.getElementById('rec-juice-price');
+
+      // Apply fade/scale out transition
+      imgEl.style.transform = 'scale(0.85) rotate(-4deg)';
+      imgEl.style.opacity = '0.3';
+      
+      // After transition, swap content and fade back in
+      setTimeout(() => {
+        imgEl.src = rec.img;
+        titleEl.textContent = rec.title;
+        subtitleEl.textContent = rec.subtitle;
+        descEl.textContent = rec.desc;
+        priceEl.textContent = rec.price;
+
+        // Populate tags
+        tagsEl.innerHTML = '';
+        rec.tags.forEach(tag => {
+          const span = document.createElement('span');
+          span.className = 'badge bg-white bg-opacity-10 text-white border border-white border-opacity-10 rounded-pill px-3 py-1.5';
+          span.textContent = tag;
+          tagsEl.appendChild(span);
+        });
+
+        // Fade back in
+        imgEl.style.transform = 'scale(1) rotate(0deg)';
+        imgEl.style.opacity = '1';
+      }, 200);
+    }
+  </script>
 </body>
 </html>

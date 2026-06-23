@@ -137,7 +137,10 @@ function initMobileMenu() {
   // Close menu when clicking links
   const links = offcanvas.querySelectorAll('.nav-link-custom');
   links.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+      if (link.classList.contains('dropdown-toggle')) {
+        return; // Don't close menu if clicking a dropdown toggle
+      }
       offcanvas.classList.remove('open');
       hamburger.classList.remove('open');
       backdrop.classList.remove('show');

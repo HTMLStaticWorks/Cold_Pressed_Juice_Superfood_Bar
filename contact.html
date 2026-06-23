@@ -8,7 +8,7 @@
   <title>Verde & Vita | Connect With Us</title>
   
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>🌿</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
   <!-- Bootstrap 5 CSS CDN -->
   <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
@@ -17,6 +17,39 @@
   <!-- Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/rtl.css">
+  <style>
+    a.contact-social-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 44px !important;
+      height: 44px !important;
+      border-radius: 50% !important;
+      border: 1px solid var(--border-color) !important;
+      color: var(--color-primary) !important;
+      transition: var(--transition-smooth) !important;
+      background-color: transparent !important;
+      line-height: 1 !important;
+      text-decoration: none !important;
+    }
+    a.contact-social-link i {
+      line-height: 1 !important;
+      font-size: 18px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      vertical-align: middle !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    a.contact-social-link:hover {
+      background-color: var(--color-primary) !important;
+      color: var(--bg-main) !important;
+      transform: translateY(-4px) !important;
+      border-color: var(--color-primary) !important;
+      box-shadow: 0 8px 20px rgba(37, 95, 59, 0.2) !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -25,71 +58,95 @@
 
   <!-- Header Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-custom">
-      <div class="container">
-        <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2" href="index.html">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
-          </svg>
-          <span>Verde & Vita</span>
-        </a>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+   <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand navbar-brand-custom" href="index.html">
+     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+      <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+      <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
+     </svg>
+     <span>Verde & Vita</span>
+    </a>
 
-        <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
-          <ul class="navbar-nav gap-2">
-            <li class="nav-item dropdown">
-              <a class="nav-link nav-link-custom dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
-              <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
-                <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1: Parallax Split</a></li>
-                <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2: Product Story</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-            <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact</a></li>
-          </ul>
-        </div>
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+     <ul class="navbar-nav gap-2">
+      <li class="nav-item dropdown">
+       <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a>
+       <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+        <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+        <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+       </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+      <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact</a></li>
+     </ul>
+    </div>
 
-        <div class="d-flex align-items-center gap-2">
-          <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="bi bi-moon-stars"></i></button>
-          <button class="btn btn-sm btn-brand-outline py-1 px-3 d-none d-sm-inline-block rtl-toggle-btn">RTL</button>
-          <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
-            <i class="bi bi-bag"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
-          </button>
-          <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login"><i class="bi bi-person"></i></a>
-          <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-          </button>
-        </div>
-      </div>
-    </nav>
-  </header>
+    <!-- Header Actions -->
+    <div class="d-flex align-items-center gap-2">
+     <!-- Light/Dark Toggle -->
+     <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme">
+      <i class="bi bi-moon-stars"></i>
+     </button>
+     
+     <!-- RTL Toggle -->
+     <button class="toggle-icon-btn rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
+
+     <!-- Shopping Cart Toggle -->
+     <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+      <i class="bi bi-bag"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+     </button>
+
+     <!-- Profile Link -->
+     <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login">
+      <i class="bi bi-person"></i>
+     </a>
+
+     <!-- Hamburger Button (Mobile Only) -->
+     <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+     </button>
+    </div>
+   </div>
+  </nav>
+ </header>
 
   <!-- Mobile Offcanvas Menu -->
   <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
-    <div class="d-flex flex-column h-100 justify-content-between">
-      <ul class="navbar-nav gap-3 fs-3">
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="index.html">Home 1</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="home-2.html">Home 2</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom animate" href="service-details.html">Cleanse Programs</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About Brand</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact Us</a></li>
-      </ul>
-      <div class="border-top pt-4">
-        <button class="toggle-icon-btn theme-toggle-btn mb-3"><i class="bi bi-moon-stars"></i></button>
-        <button class="btn btn-sm btn-brand-outline rtl-toggle-btn px-4 w-100 mb-3">RTL</button>
-        <a href="login.html" class="btn btn-brand w-100 py-3"><i class="bi bi-person me-2"></i>Sign In</a>
+    <!-- Close Button -->
+    <button class="btn-close position-absolute top-0 end-0 m-4" aria-label="Close Menu" onclick="document.querySelector('.hamburger-custom').click();" style="font-size: 18px; z-index: 10;"></button>
+  <div class="d-flex flex-column h-100 justify-content-between">
+   <ul class="navbar-nav gap-3 fs-3">
+    <li class="nav-item dropdown">
+     <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center justify-content-between" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>Home</span> <i class="bi bi-chevron-down" style="font-size: 14px;"></i></a>
+     <ul class="dropdown-menu border-0 shadow-sm bg-card mt-2">
+      <li><a class="dropdown-item py-2 px-3" href="index.html">Home 1</a></li>
+      <li><a class="dropdown-item py-2 px-3" href="home-2.html">Home 2</a></li>
+     </ul>
+    </li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="about.html">About</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="services.html">Services</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="menu.html">Menu</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="service-details.html">Programs</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
+    <li class="nav-item"><a class="nav-link nav-link-custom active" href="contact.html">Contact</a></li>
+   </ul>
+   <div class="border-top pt-4">
+
+        <a href="login.html" class="btn btn-brand w-100 mt-4 py-3"><i class="bi bi-person me-2"></i>Sign In / Join</a>
       </div>
-    </div>
   </div>
+ </div>
 
   <!-- Cart Drawer -->
   <div class="cart-drawer-custom" id="cart-drawer">
@@ -112,11 +169,11 @@
 
   <main style="padding-top: 100px;">
     <!-- Page Header -->
-    <section class="section-padding text-center" style="background-color: var(--bg-soft);">
-      <div class="container">
+    <section class="section-padding text-center position-relative" style="background-image: linear-gradient(rgba(15, 25, 18, 0.65), rgba(15, 25, 18, 0.65)), url('assets/images/contact_hero_bg.png'); background-size: cover; background-position: center; background-repeat: no-repeat; padding-top: 140px; padding-bottom: 140px;">
+      <div class="container position-relative" style="z-index: 2;">
         <span class="badge text-brand-primary bg-white border px-3 py-2 rounded-pill mb-4 shadow-sm">Get in Touch</span>
-        <h1 class="font-display-large text-brand-primary mb-3">Connect With Us</h1>
-        <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
+        <h1 class="font-display-large text-white mb-3" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Connect With Us</h1>
+        <p class="text-white fs-5 mx-auto" style="max-width: 600px; opacity: 0.9; text-shadow: 0 2px 8px rgba(0,0,0,0.3);">
           Have questions about a cleanse plan? Need custom corporate packaging? Our nutritionists are here to help.
         </p>
       </div>
@@ -128,26 +185,26 @@
         <div class="row g-5">
           <!-- Left side Contact Form -->
           <div class="col-lg-6 reveal-on-scroll">
-            <div class="glass-card p-5">
+            <div class="glass-card p-5 text-center">
               <h2 class="fs-3 text-brand-primary mb-2">Send a Message</h2>
               <p class="text-muted small mb-4">We reply to all inquiries within 12 business hours.</p>
               
               <form id="contact-form" novalidate onsubmit="event.preventDefault(); handleFormSubmit();">
-                <div class="mb-3 text-start">
+                <div class="mb-3 text-center">
                   <label for="c-name" class="form-label text-brand-primary font-weight-500 small">Full Name</label>
-                  <input type="text" class="form-control rounded-3 border-color bg-transparent p-3" id="c-name" placeholder="John Doe" required>
+                  <input type="text" class="form-control text-center rounded-3 border-color bg-transparent p-3" id="c-name" placeholder="John Doe" required>
                   <div class="invalid-feedback">Please enter your name.</div>
                 </div>
 
-                <div class="mb-3 text-start">
+                <div class="mb-3 text-center">
                   <label for="c-email" class="form-label text-brand-primary font-weight-500 small">Email Address</label>
-                  <input type="email" class="form-control rounded-3 border-color bg-transparent p-3" id="c-email" placeholder="name@domain.com" required>
+                  <input type="email" class="form-control text-center rounded-3 border-color bg-transparent p-3" id="c-email" placeholder="name@domain.com" required>
                   <div class="invalid-feedback">Please provide a valid email.</div>
                 </div>
 
-                <div class="mb-3 text-start">
+                <div class="mb-3 text-center">
                   <label for="c-subject" class="form-label text-brand-primary font-weight-500 small">Subject</label>
-                  <select class="form-select rounded-3 border-color bg-transparent p-3" id="c-subject" required>
+                  <select class="form-select text-center rounded-3 border-color bg-transparent p-3" id="c-subject" required>
                     <option value="" disabled selected>Select an option...</option>
                     <option value="cleanse">Cleanse Program Inquiry</option>
                     <option value="catering">Corporate / Private Events</option>
@@ -156,14 +213,21 @@
                   <div class="invalid-feedback">Please select a subject.</div>
                 </div>
 
-                <div class="mb-4 text-start">
+                <div class="mb-4 text-center">
                   <label for="c-message" class="form-label text-brand-primary font-weight-500 small">Message Details</label>
-                  <textarea class="form-control rounded-3 border-color bg-transparent p-3" id="c-message" rows="5" placeholder="Your details here..." required></textarea>
+                  <textarea class="form-control text-center rounded-3 border-color bg-transparent p-3" id="c-message" rows="5" placeholder="Your details here..." required></textarea>
                   <div class="invalid-feedback">Please enter your message details.</div>
                 </div>
 
                 <button type="submit" class="btn btn-brand w-100 py-3">Submit Inquiry</button>
               </form>
+
+              <!-- Social Media Links -->
+              <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="#" class="contact-social-link" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="contact-social-link" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="contact-social-link" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+              </div>
 
               <!-- Success Alert -->
               <div id="contact-success" class="alert alert-success border-0 rounded-pill mt-4 text-brand-primary" style="display: none; background-color: var(--color-primary-light);">
@@ -175,7 +239,7 @@
           <!-- Right side Contact Details & Map -->
           <div class="col-lg-6 reveal-on-scroll">
             <!-- Details Grid -->
-            <div class="row g-4 mb-4 text-start">
+            <div class="row g-4 mb-4 text-center">
               <div class="col-md-6">
                 <div class="glass-card p-4 h-100">
                   <h4 class="fs-6 text-brand-primary font-weight-600 mb-2">Beverly Hills Flagship</h4>
@@ -192,15 +256,16 @@
               </div>
             </div>
 
-            <!-- Map Vector Placeholder -->
+            <!-- Real Google Map Embed -->
             <div class="glass-card p-0 overflow-hidden position-relative" style="height: 350px;">
-              <!-- Simulated map styling -->
-              <div class="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4 bg-soft-section">
-                <i class="bi bi-geo-alt display-2 text-brand-primary mb-3"></i>
-                <h4 class="text-brand-primary fs-5 font-weight-600">Beverly Hills, California</h4>
-                <p class="text-muted small mb-4">Interactive Maps API Container</p>
-                <a href="https://maps.google.com" target="_blank" class="btn btn-brand-outline py-2 px-4">Open Google Maps</a>
-              </div>
+              <iframe 
+                src="https://maps.google.com/maps?q=Beverly%20Hills,%20California&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0; min-height: 350px; display: block; filter: grayscale(0.1) contrast(1.1) brightness(0.95);" 
+                allowfullscreen="" 
+                loading="lazy">
+              </iframe>
             </div>
           </div>
         </div>
@@ -212,10 +277,13 @@
   <footer class="footer-custom">
     <div class="container">
       <div class="row g-5">
+        <!-- Logo & Brand statement -->
         <div class="col-lg-4 col-md-6">
-          <a class="navbar-brand navbar-brand-custom d-flex align-items-center gap-2 mb-4" href="index.html">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 2C8.268 2 2 8.268 2 16C2 23.732 8.268 30 16 30C23.732 30 30 23.732 30 16C30 8.268 23.732 2 16 2ZM17.5 24.5C17.5 25.328 16.828 26 16 26C15.172 26 14.5 25.328 14.5 24.5V17.5H7.5C6.672 17.5 6 16.828 6 16C6 15.172 6.672 14.5 7.5 14.5H14.5V7.5C14.5 6.672 15.172 6 16 6C16.828 6 17.5 6.672 17.5 7.5V14.5H24.5C25.328 14.5 26 15.172 26 16C26 16.828 25.328 17.5 24.5 17.5H17.5V24.5Z" fill="var(--color-primary)"/>
+          <a class="navbar-brand navbar-brand-custom mb-4" href="index.html">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
+              <path d="M16 5C22 11 24 17 21 22C18 27 12 28 9 24C6 20 7 13 16 5Z" fill="var(--color-primary)"/>
+              <path d="M16 5C14 10 13 16 15 22" stroke="var(--bg-main)" stroke-width="1.5" stroke-linecap="round"/>
             </svg>
             <span>Verde & Vita</span>
           </a>
@@ -225,11 +293,11 @@
           <div class="d-flex gap-3 fs-5">
             <a href="#" class="text-brand-primary" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-brand-primary" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
             <a href="#" class="text-brand-primary" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
+        <!-- Quick Links -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -241,6 +309,7 @@
           </ul>
         </div>
 
+        <!-- Resources -->
         <div class="col-lg-2 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
@@ -252,6 +321,7 @@
           </ul>
         </div>
 
+        <!-- Contact details -->
         <div class="col-lg-4 col-md-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
           <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>

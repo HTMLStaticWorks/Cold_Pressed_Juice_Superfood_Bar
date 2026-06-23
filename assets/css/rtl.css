@@ -8,9 +8,14 @@ html[dir="rtl"] .navbar-brand-custom {
   letter-spacing: normal;
 }
 
+/* RTL nav underline: flip transform-origin so underline grows right-to-left */
 html[dir="rtl"] .nav-link-custom::after {
-  left: auto;
-  right: 16px;
+  transform-origin: left;
+}
+
+html[dir="rtl"] .nav-link-custom:hover::after,
+html[dir="rtl"] .nav-link-custom.active::after {
+  transform-origin: right;
 }
 
 html[dir="rtl"] .hamburger-custom {
