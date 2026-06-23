@@ -61,7 +61,7 @@
   padding: 0;
 }
 
-body {
+html, body {
   font-family: var(--font-primary);
   background-color: var(--bg-main);
   color: var(--text-main);
@@ -225,7 +225,7 @@ a:hover {
   font-weight: 400;
   color: var(--text-main) !important;
   font-size: 15px;
-  padding: 6px 16px;
+  padding: 6px 16px !important;
   opacity: 0.8;
   position: relative;
   transition: var(--transition-smooth);
@@ -246,6 +246,8 @@ a:hover {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  margin: 0;
 }
 
 .nav-link-custom:hover::after, .nav-link-custom.active::after {
@@ -472,6 +474,8 @@ html[dir="rtl"] .offcanvas-custom.open {
   width: 100%;
   max-width: 500px;
   z-index: 2;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-juice-image {
@@ -556,6 +560,7 @@ html[dir="rtl"] .offcanvas-custom.open {
   border-radius: 30px;
   font-size: 12px;
   font-weight: 500;
+  z-index: 2;
 }
 
 /* Cleanse Program Pricing Cards */
@@ -576,9 +581,9 @@ html[dir="rtl"] .offcanvas-custom.open {
 .pricing-card.featured::after {
   content: 'POPULAR';
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background-color: var(--color-primary);
   color: var(--bg-main);
   font-size: 11px;
@@ -722,7 +727,7 @@ html[dir="rtl"] .offcanvas-custom.open {
 /* Typography styles for large display title */
 .font-display-large {
   font-size: clamp(56px, 8vw, 110px);
-  line-height: 0.95;
+  line-height: 1.15;
   font-weight: 300;
   letter-spacing: -0.04em;
 }
@@ -901,6 +906,22 @@ html[dir="rtl"] .blog-content blockquote {
 /* Fix for footer text visibility in dark mode */
 .text-muted {
   color: var(--text-muted) !important;
+}
+
+/* Footer Link styling */
+.footer-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+.footer-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Prevent footer content from hiding behind back-to-top button */
+footer {
+  padding-bottom: 80px;
 }
 
 /* Social icons hover effect */

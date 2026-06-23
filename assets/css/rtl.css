@@ -34,6 +34,14 @@ html[dir="rtl"] .footer-link:hover {
   padding-right: 8px;
 }
 
+
+
+/* Fix missing gap between LTR footer links in RTL mode */
+html[dir="rtl"] .footer-link.me-3 {
+  margin-left: 0 !important;
+  margin-right: 1rem !important;
+}
+
 /* Custom alignment for timeline */
 @media (min-width: 769px) {
   html[dir="rtl"] .timeline-item:nth-child(odd) .timeline-content {

@@ -54,26 +54,27 @@
       <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
       <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
      </ul>
+
     </div>
 
     <!-- Header Actions -->
     <div class="d-flex align-items-center gap-2">
      <!-- Light/Dark Toggle -->
-     <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme">
+     <button class="toggle-icon-btn d-none d-lg-inline-flex theme-toggle-btn" aria-label="Toggle Theme">
       <i class="bi bi-moon-stars"></i>
      </button>
      
      <!-- RTL Toggle -->
-     <button class="toggle-icon-btn rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
+     <button class="toggle-icon-btn d-none d-lg-inline-flex rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
 
      <!-- Shopping Cart Toggle -->
-     <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart">
+     <button class="toggle-icon-btn d-none d-lg-inline-flex cart-toggle-btn position-relative" aria-label="Open Cart">
       <i class="bi bi-bag"></i>
       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
      </button>
 
      <!-- Profile Link -->
-     <a href="login.html" class="toggle-icon-btn d-none d-sm-inline-flex" aria-label="Account Login">
+     <a href="login.html" class="toggle-icon-btn d-none d-lg-inline-flex" aria-label="Account Login">
       <i class="bi bi-person"></i>
      </a>
 
@@ -108,10 +109,20 @@
     <li class="nav-item"><a class="nav-link nav-link-custom" href="blog.html">Blog</a></li>
     <li class="nav-item"><a class="nav-link nav-link-custom" href="contact.html">Contact</a></li>
    </ul>
-   <div class="border-top pt-4">
-
-        <a href="login.html" class="btn btn-brand w-100 mt-4 py-3"><i class="bi bi-person me-2"></i>Sign In / Join</a>
+      <div class="d-flex justify-content-center gap-4 pt-4 border-top mt-auto mb-4">
+        <button class="toggle-icon-btn theme-toggle-btn" aria-label="Toggle Theme">
+          <i class="bi bi-moon-stars"></i>
+        </button>
+        <button class="toggle-icon-btn rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
+        <button class="toggle-icon-btn cart-toggle-btn position-relative" aria-label="Open Cart" onclick="document.querySelector('.hamburger-custom').click();">
+          <i class="bi bi-bag"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
+        </button>
+        <a href="login.html" class="toggle-icon-btn d-inline-flex" aria-label="Account Login">
+          <i class="bi bi-person"></i>
+        </a>
       </div>
+
   </div>
  </div>
 
