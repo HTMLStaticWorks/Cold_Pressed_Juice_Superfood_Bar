@@ -81,3 +81,7 @@ html[dir="rtl"] ul {
   padding-right: 2rem;
   padding-left: 0;
 }
+
+html[dir="rtl"] ul.list-unstyled {
+  padding-right: 0;
+}

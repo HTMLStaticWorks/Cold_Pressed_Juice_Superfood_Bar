@@ -52,7 +52,7 @@
 
   <!-- Header Navbar -->
   <header>
-  <nav class="navbar navbar-expand-lg navbar-custom">
+  <nav class="navbar navbar-expand-xl navbar-custom">
    <div class="container">
     <!-- Logo -->
     <a class="navbar-brand navbar-brand-custom" href="index.html">
@@ -65,7 +65,7 @@
     </a>
 
     <!-- Desktop Menu -->
-    <div class="collapse navbar-collapse d-none d-lg-flex justify-content-center">
+    <div class="collapse navbar-collapse d-none d-xl-flex justify-content-center">
      <ul class="navbar-nav gap-2">
       <li class="nav-item dropdown">
        <a class="nav-link nav-link-custom dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Home <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></a>
@@ -87,26 +87,26 @@
     <!-- Header Actions -->
     <div class="d-flex align-items-center gap-2">
      <!-- Light/Dark Toggle -->
-     <button class="toggle-icon-btn d-none d-lg-inline-flex theme-toggle-btn" aria-label="Toggle Theme">
+     <button class="toggle-icon-btn d-none d-xl-inline-flex theme-toggle-btn" aria-label="Toggle Theme">
       <i class="bi bi-moon-stars"></i>
      </button>
      
      <!-- RTL Toggle -->
-     <button class="toggle-icon-btn d-none d-lg-inline-flex rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
+     <button class="toggle-icon-btn d-none d-xl-inline-flex rtl-toggle-btn" style="font-size: 13px; font-weight: 600;">RTL</button>
 
      <!-- Shopping Cart Toggle -->
-     <button class="toggle-icon-btn d-none d-lg-inline-flex cart-toggle-btn position-relative" aria-label="Open Cart">
+     <button class="toggle-icon-btn d-none d-xl-inline-flex cart-toggle-btn position-relative" aria-label="Open Cart">
       <i class="bi bi-bag"></i>
       <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count-badge" style="font-size: 10px; display: none;">0</span>
      </button>
 
      <!-- Profile Link -->
-     <a href="login.html" class="toggle-icon-btn d-none d-lg-inline-flex" aria-label="Account Login">
+     <a href="login.html" class="toggle-icon-btn d-none d-xl-inline-flex" aria-label="Account Login">
       <i class="bi bi-person"></i>
      </a>
 
      <!-- Hamburger Button (Mobile Only) -->
-     <button class="hamburger-custom d-lg-none" aria-label="Toggle Navigation">
+     <button class="hamburger-custom d-xl-none" aria-label="Toggle Navigation">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -117,7 +117,7 @@
  </header>
 
   <!-- Mobile Offcanvas Menu -->
-  <div class="offcanvas-custom d-lg-none" id="offcanvas-menu">
+  <div class="offcanvas-custom d-xl-none" id="offcanvas-menu">
     <!-- Close Button -->
     <button class="btn-close position-absolute top-0 end-0 m-4" aria-label="Close Menu" onclick="document.querySelector('.hamburger-custom').click();" style="font-size: 18px; z-index: 10;"></button>
   <div class="d-flex flex-column h-100 justify-content-between">
@@ -248,7 +248,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$8.50</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Green Detox', '$8.50', 'assets/images/green_detox.png', 'Spinach, Kale, Celery, Green Apple, Ginger, Lemon', 'Low fructose, high chlorophyll cellular alkalizer.', '120kcal', '2g', '24g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Green Detox', '$8.50', 'assets/images/green_detox.png', 'Spinach, Kale, Celery, Green Apple, Ginger, Lemon', 'Low fructose, high chlorophyll cellular alkalizer.', '120kcal', '2g', '24g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -288,7 +288,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Immunity Blend', '$9.00', 'assets/images/immunity_blend.png', 'Ginger, Turmeric, Carrot, Lemon, Black Pepper, Honey', 'Active curcuminoids combined with piperine for cellular defense boosts.', '110kcal', '1g', '21g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Immunity Blend', '$9.00', 'assets/images/immunity_blend.png', 'Ginger, Turmeric, Carrot, Lemon, Black Pepper, Honey', 'Active curcuminoids combined with piperine for cellular defense boosts.', '110kcal', '1g', '21g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -328,7 +328,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$8.00</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Celery Cleanse', '$8.00', 'assets/images/green_detox.png', '100% Organic Celery, Fresh Lemon Juice', 'A high-potassium raw digestif designed to restore fluid balance and reduce digestive swelling.', '45kcal', '1.5g', '9g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Celery Cleanse', '$8.00', 'assets/images/green_detox.png', '100% Organic Celery, Fresh Lemon Juice', 'A high-potassium raw digestif designed to restore fluid balance and reduce digestive swelling.', '45kcal', '1.5g', '9g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -369,7 +369,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$9.50</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Almond Fuel', '$9.50', 'assets/images/tropical_energy.png', 'Activated Almond Milk, Raw Almond Butter, Dates, Vanilla Bean, Cinnamon', 'Keto-friendly protein lipids to maintain biological full feeling and repair cells.', '290kcal', '10g', '18g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Almond Fuel', '$9.50', 'assets/images/tropical_energy.png', 'Activated Almond Milk, Raw Almond Butter, Dates, Vanilla Bean, Cinnamon', 'Keto-friendly protein lipids to maintain biological full feeling and repair cells.', '290kcal', '10g', '18g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -409,7 +409,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Berry Boost Smoothie', '$9.00', 'assets/images/berry_boost.png', 'Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple', 'Poly-phenols and nitric oxides to restore blood flow dynamics.', '145kcal', '1.5g', '31g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Berry Boost Smoothie', '$9.00', 'assets/images/berry_boost.png', 'Strawberry, Blueberry, Pomegranate, Beetroot, Red Apple', 'Poly-phenols and nitric oxides to restore blood flow dynamics.', '145kcal', '1.5g', '31g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -449,7 +449,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$8.50</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Tropical Energy Smoothie', '$8.50', 'assets/images/tropical_energy.png', 'Mango, Pineapple, Orange, Passion Fruit, Turmeric', 'Enzymatic bromelain blend to support digestive enzymes and speed recovery.', '160kcal', '1g', '34g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Tropical Energy Smoothie', '$8.50', 'assets/images/tropical_energy.png', 'Mango, Pineapple, Orange, Passion Fruit, Turmeric', 'Enzymatic bromelain blend to support digestive enzymes and speed recovery.', '160kcal', '1g', '34g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -490,7 +490,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$12.00</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Acai Berry Bowl', '$12.00', 'assets/images/berry_boost.png', 'Pure Acai Blend, Organic Granola, Banana, Blueberries, Raw Coconut Shavings, Cacao Nibs', 'Superfood berry paste structured with raw fibers and activated seed crunch.', '380kcal', '6g', '48g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Acai Berry Bowl', '$12.00', 'assets/images/berry_boost.png', 'Pure Acai Blend, Organic Granola, Banana, Blueberries, Raw Coconut Shavings, Cacao Nibs', 'Superfood berry paste structured with raw fibers and activated seed crunch.', '380kcal', '6g', '48g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -530,7 +530,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$12.50</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Pitaya Gold Bowl', '$12.50', 'assets/images/berry_boost.png', 'Red Dragonfruit, Strawberries, Banana, Hemp Seeds, Honey, House Granola', 'Enriched with antioxidants and digestive plant-based fibers to promote clean cellular digestion.', '340kcal', '5g', '44g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Pitaya Gold Bowl', '$12.50', 'assets/images/berry_boost.png', 'Red Dragonfruit, Strawberries, Banana, Hemp Seeds, Honey, House Granola', 'Enriched with antioxidants and digestive plant-based fibers to promote clean cellular digestion.', '340kcal', '5g', '44g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -570,7 +570,7 @@
               <div class="d-flex justify-content-between align-items-center pt-3 border-top">
                 <span class="fs-5 price text-brand-primary font-weight-600">$13.00</span>
                 <div class="d-flex gap-2">
-                  <button class="btn btn-brand-outline py-2 px-3" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Spirulina Green Bowl', '$13.00', 'assets/images/green_detox.png', 'Organic Blue Spirulina, Mango, Spinach, Almond Milk, Pumpkin Seeds, Coconut', 'Highly alkalinizing blue-green algae proteins blended with raw magnesium-rich pumpkin seeds.', '310kcal', '8g', '38g')">Quick View</button>
+                  <button class="btn btn-brand-outline py-2 px-3 text-nowrap" data-bs-toggle="modal" data-bs-target="#quickview-modal" onclick="fillQuickView('Spirulina Green Bowl', '$13.00', 'assets/images/green_detox.png', 'Organic Blue Spirulina, Mango, Spinach, Almond Milk, Pumpkin Seeds, Coconut', 'Highly alkalinizing blue-green algae proteins blended with raw magnesium-rich pumpkin seeds.', '310kcal', '8g', '38g')">Quick View</button>
                   <button class="btn btn-brand px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg"></i></button>
                 </div>
               </div>
@@ -595,13 +595,13 @@
         <div class="row g-4 justify-content-center">
           <!-- Special 1 -->
           <div class="col-md-6 col-lg-5 reveal-on-scroll">
-            <div class="glass-card text-start h-100 d-flex flex-row align-items-center gap-4 p-4" data-product-name="Summer Pitaya Hydrator" data-product-price="9.00" data-product-img="assets/images/pitaya_hydrator.png">
-              <img src="assets/images/pitaya_hydrator.png" alt="Summer Pitaya Hydrator" class="img-fluid rounded-3" style="max-height: 140px; object-fit: contain;">
+            <div class="glass-card text-start h-100 d-flex flex-column flex-sm-row align-items-sm-center gap-4 p-4" data-product-name="Summer Pitaya Hydrator" data-product-price="9.00" data-product-img="assets/images/pitaya_hydrator.png">
+              <img src="assets/images/pitaya_hydrator.png" alt="Summer Pitaya Hydrator" class="img-fluid rounded-3 mx-auto mx-sm-0" style="max-height: 140px; max-width: 140px; object-fit: contain; flex-shrink: 0;">
               <div class="w-100">
                 <span class="badge bg-warning text-dark mb-2">Summer Batch</span>
                 <h3 class="fs-4 mb-1 text-brand-primary juice-title">Summer Pitaya Hydrator</h3>
                 <p class="text-muted mb-2 ingredients-list" style="font-size: 13px; line-height: 1.3;">Fresh Watermelon, Red Dragonfruit, Cucumber, Mint, Lime</p>
-                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 pt-2 border-top">
                   <span class="fs-5 price text-brand-primary font-weight-600">$9.00</span>
                   <button class="btn btn-brand btn-sm px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg me-1"></i> Add</button>
                 </div>
@@ -611,13 +611,13 @@
 
           <!-- Special 2 -->
           <div class="col-md-6 col-lg-5 reveal-on-scroll" style="transition-delay: 0.15s;">
-            <div class="glass-card text-start h-100 d-flex flex-row align-items-center gap-4 p-4" data-product-name="Golden Charcoal Cleanser" data-product-price="9.50" data-product-img="assets/images/charcoal_elixir.png">
-              <img src="assets/images/charcoal_elixir.png" alt="Golden Charcoal Elixir" class="img-fluid rounded-3" style="max-height: 140px; object-fit: contain;">
+            <div class="glass-card text-start h-100 d-flex flex-column flex-sm-row align-items-sm-center gap-4 p-4" data-product-name="Golden Charcoal Cleanser" data-product-price="9.50" data-product-img="assets/images/charcoal_elixir.png">
+              <img src="assets/images/charcoal_elixir.png" alt="Golden Charcoal Elixir" class="img-fluid rounded-3 mx-auto mx-sm-0" style="max-height: 140px; max-width: 140px; object-fit: contain; flex-shrink: 0;">
               <div class="w-100">
                 <span class="badge bg-dark text-white mb-2">Active Detox</span>
                 <h3 class="fs-4 mb-1 text-brand-primary juice-title">Golden Charcoal Elixir</h3>
                 <p class="text-muted mb-2 ingredients-list" style="font-size: 13px; line-height: 1.3;">Activated Charcoal, Ginger, Turmeric, Lemon, Cayenne, Agave</p>
-                <div class="d-flex justify-content-between align-items-center mt-3 pt-2 border-top">
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3 pt-2 border-top">
                   <span class="fs-5 price text-brand-primary font-weight-600">$9.50</span>
                   <button class="btn btn-brand btn-sm px-3 py-2 add-to-cart-btn"><i class="bi bi-plus-lg me-1"></i> Add</button>
                 </div>
@@ -874,7 +874,7 @@
     <div class="container">
       <div class="row g-5">
         <!-- Logo & Brand statement -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-xl-4 col-lg-6 col-md-6">
           <a class="navbar-brand navbar-brand-custom mb-4" href="index.html">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M16 3C16 3 25 10 25 19C25 24 21 28 16 28C11 28 7 24 7 19C7 10 16 3 16 3Z" fill="var(--color-primary)" fill-opacity="0.15"/>
@@ -894,7 +894,7 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="col-lg-2 col-md-6 col-6">
+        <div class="col-xl-2 col-lg-6 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Brand</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
             <li><a href="about.html" class="footer-link">Our Story</a></li>
@@ -906,7 +906,7 @@
         </div>
 
         <!-- Resources -->
-        <div class="col-lg-2 col-md-6 col-6">
+        <div class="col-xl-2 col-lg-6 col-md-6 col-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Cleanse Support</h5>
           <ul class="list-unstyled d-flex flex-column gap-2">
             <li><a href="service-details.html" class="footer-link">1-Day Reset Plan</a></li>
@@ -918,7 +918,7 @@
         </div>
 
         <!-- Contact details -->
-        <div class="col-lg-4 col-md-6">
+        <div class="col-xl-4 col-lg-6 col-md-6">
           <h5 class="mb-4 text-brand-primary font-weight-600 fs-6 uppercase tracking-wide">Flagship Juice Bar</h5>
           <p class="text-muted fs-6 mb-2">120 Fresh Greens Way, Beverly Hills, CA 90210</p>
           <p class="text-muted fs-6 mb-2">pickup@verdevita.com</p>

@@ -119,8 +119,23 @@ a:hover {
   color: var(--color-primary);
 }
 
+[data-theme="dark"] .text-brand-primary:where(:not(.bg-white):not(.bg-light)) {
+  color: #ffffff !important;
+}
+
+/* Ensure text inside explicitly light backgrounds stays dark green in dark mode */
+[data-theme="dark"] [style*="--color-primary-light"] .text-brand-primary,
+[data-theme="dark"] .bg-white .text-brand-primary,
+[data-theme="dark"] .bg-light .text-brand-primary {
+  color: var(--color-primary) !important;
+}
+
 .bg-soft-section {
   background-color: var(--bg-soft);
+}
+
+.border-color {
+  border-color: var(--border-color) !important;
 }
 
 /* Premium Buttons */
@@ -176,6 +191,31 @@ a:hover {
   background-color: rgba(37, 95, 59, 0.05);
 }
 
+/* btn-check selected state: fill with brand color and turn all child text white */
+.btn-check:checked + .btn-brand-outline {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff !important;
+}
+
+.btn-check:checked + .btn-brand-outline strong,
+.btn-check:checked + .btn-brand-outline span {
+  color: #ffffff !important;
+}
+
+/* Inline link hover effect (login, signup, forgot password, terms links) */
+a.text-brand-primary {
+  text-decoration: none;
+  transition: color 0.25s ease, text-underline-offset 0.25s ease;
+  text-underline-offset: 3px;
+}
+
+a.text-brand-primary:hover {
+  color: #5dbf7e !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* Sticky Blurry Navbar */
 .navbar-custom {
   position: fixed;
@@ -201,8 +241,8 @@ a:hover {
   box-shadow: 0 4px 30px var(--glass-shadow);
 }
 
-/* Mobile navbar: tighter spacing */
-@media (max-width: 991.98px) {
+/* Mobile & Tablet navbar: tighter spacing */
+@media (max-width: 1199.98px) {
   .navbar-custom {
     padding: 12px 0;
   }
@@ -571,6 +611,12 @@ html[dir="rtl"] .offcanvas-custom.open {
   background-color: var(--bg-card);
   transition: var(--transition-smooth);
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card > .btn {
+  margin-top: auto;
 }
 
 .pricing-card.featured {

@@ -54,7 +54,7 @@ function initCustomCursor() {
    2. 3D Tilt Effect on Juice / Product Cards
    ========================================================================== */
 function initTiltCards() {
-  const cards = document.querySelectorAll('.glass-card, .pricing-card');
+  const cards = document.querySelectorAll('.glass-card:not(.no-tilt), .pricing-card:not(.no-tilt)');
   
   // Disable 3D tilt on touch devices for performance
   if (window.matchMedia('(hover: none)').matches) return;
